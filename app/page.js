@@ -2,7 +2,7 @@ import Sidebar from "../components/Sidebar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen bg-white ml-[25%]">
+    <main className="flex min-h-screen bg-white md:ml-[25%]">
       <Sidebar />
       <div className="w-1/1 relative">
         <img

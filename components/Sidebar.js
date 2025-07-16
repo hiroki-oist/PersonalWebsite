@@ -18,7 +18,7 @@ export default function Sidebar() {
   return (
     <>
       {/* --- PC/タブレット表示 --- */}
-      <div className="hidden md:flex w-1/4 p-8 flex-col justify-between border-r border-gray-200">
+      <div className="hidden md:flex fixed top-0 left-0 h-full w-1/4 p-8 flex-col justify-between border-r border-gray-200 bg-white">
         <SidebarContent
           isHovered={isHovered}
           setIsHovered={setIsHovered}
@@ -40,17 +40,21 @@ export default function Sidebar() {
           </div>
         </button>
 
-        {/* メニュー内容（オーバーレイ表示） */}
+        {/* メニュー内容（全画面オーバーレイ） */}
         {menuOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-40 z-40" onClick={() => setMenuOpen(false)}>
+          <div
+            className="fixed inset-0 bg-black bg-opacity-40 z-40"
+            onClick={() => setMenuOpen(false)}
+          >
             <div
-              className="absolute top-0 right-0 w-3/4 h-full bg-white p-6 shadow-lg overflow-y-auto"
+              className="fixed top-0 left-0 w-full h-full bg-white p-6 overflow-y-auto"
               onClick={(e) => e.stopPropagation()} // 背景タップで閉じるが内容タップでは閉じない
             >
               <SidebarContent
                 isHovered={isHovered}
                 setIsHovered={setIsHovered}
                 switchToEnglish={switchToEnglish}
+                closeMenu={() => setMenuOpen(false)} // ← 追加
               />
             </div>
           </div>
@@ -60,8 +64,13 @@ export default function Sidebar() {
   );
 }
 
-/* --- Sidebarの共通内容部分を切り出し --- */
-function SidebarContent({ isHovered, setIsHovered, switchToEnglish }) {
+/* --- Sidebarの共通内容部分 --- */
+function SidebarContent({
+  isHovered,
+  setIsHovered,
+  switchToEnglish,
+  closeMenu, // スマホ用：押したら閉じる
+}) {
   return (
     <div>
       {/* 自己紹介写真 */}
@@ -83,16 +92,32 @@ function SidebarContent({ isHovered, setIsHovered, switchToEnglish }) {
 
       {/* 項目 */}
       <div className="space-y-3 mb-6">
-        <Link href="/" className="block text-blue-600 hover:underline text-lg font-semibold">
+        <Link
+          href="/"
+          className="block text-blue-600 hover:underline text-lg font-semibold"
+          onClick={closeMenu}
+        >
           トップ
         </Link>
-        <Link href="/achievements" className="block text-blue-600 hover:underline text-lg font-semibold">
+        <Link
+          href="/achievements"
+          className="block text-blue-600 hover:underline text-lg font-semibold"
+          onClick={closeMenu}
+        >
           研究業績・プロフィール
         </Link>
-        <Link href="/skills" className="block text-blue-600 hover:underline text-lg font-semibold">
+        <Link
+          href="/skills"
+          className="block text-blue-600 hover:underline text-lg font-semibold"
+          onClick={closeMenu}
+        >
           スキル
         </Link>
-        <Link href="/activities" className="block text-blue-600 hover:underline text-lg font-semibold">
+        <Link
+          href="/activities"
+          className="block text-blue-600 hover:underline text-lg font-semibold"
+          onClick={closeMenu}
+        >
           活動記録
         </Link>
       </div>

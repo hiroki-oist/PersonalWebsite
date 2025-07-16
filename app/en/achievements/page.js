@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AchievementsEn() {
   return (
-    <main className="flex min-h-screen bg-white ml-[25%]">
+    <main className="flex min-h-screen bg-white md:ml-[25%]">
       <SidebarEn />
       <div className="w-1/1 p-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">Achievements</h1>

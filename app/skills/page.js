@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Achievements() {
   return (
-    <main className="flex min-h-screen bg-white ml-[25%]">
+    <main className="flex min-h-screen bg-white md:ml-[25%]">
       <Sidebar />
       <div className="w-3/4 p-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">スキル</h1>
