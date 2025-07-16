@@ -205,7 +205,7 @@ export default function Achievements() {
                 転移学習を用いた、スマートフォンロボット同士がお互いを認識する画像認識モデルの構築
                 </p>
                 <p className="text-sm text-gray-700">
-                銅谷　賢治 教授 / 沖縄、日本
+                銅谷賢治 教授 / 沖縄、日本
                 </p>
                 <p className="text-sm text-gray-700 mt-1">
                 沖縄科学技術大学院大学 神経計算ユニット
@@ -342,10 +342,10 @@ export default function Achievements() {
         </section>
 
 
-        {/* --- 資格と賞罰歴 --- */}
+        {/* --- 奨学金 & フェローシップ --- */}
         <section className="mb-8 mt-12">
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            資格と賞罰歴
+            奨学金 & フェローシップ
           </h2>
           <ol className="list-decimal list-inside text-gray-700 space-y-4">
             <li className="grid grid-cols-5 gap-2">
@@ -392,6 +392,14 @@ export default function Achievements() {
                 </ul>
               </div>
             </li>
+          </ol>
+        </section>
+        {/* ---　学術活動 --- */}
+        <section className="mb-8 mt-12">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            学術活動
+          </h2>
+          <ol className="list-decimal list-inside text-gray-700 space-y-4">
             <li className="grid grid-cols-5 gap-2">
               <div className="col-span-1 text-sm text-gray-600">
                 2025.5

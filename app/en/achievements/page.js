@@ -309,10 +309,10 @@ export default function AchievementsEn() {
           </ol>
         </section>
 
-        {/* --- Awards and Fellowships --- */}
+        {/* --- Scholarships and Fellowships --- */}
         <section className="mb-8 mt-12">
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-            Awards and Fellowships
+            Scholarships and Fellowships
           </h2>
           <ol className="list-decimal list-inside text-gray-700 space-y-4">
             <li className="grid grid-cols-5 gap-2">
@@ -353,6 +353,14 @@ export default function AchievementsEn() {
                 </ul>
               </div>
             </li>
+          </ol>
+        </section>
+        {/* --- Academic Services --- */}
+        <section className="mb-8 mt-12">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+            Academic Services
+          </h2>
+          <ol className="list-decimal list-inside text-gray-700 space-y-4">
             <li className="grid grid-cols-5 gap-2">
               <div className="col-span-1 text-sm text-gray-600">2025.5</div>
               <div className="col-span-4">
@@ -365,22 +373,6 @@ export default function AchievementsEn() {
               </div>
             </li>
           </ol>
-        </section>
-
-        {/* --- Languages --- */}
-        <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Languages</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>
-              <span className="font-bold">English:</span> Near-native level (13 years of overseas experience)
-            </li>
-            <li>
-              <span className="font-bold">Japanese:</span> Native level (mother tongue)
-            </li>
-            <li>
-              <span className="font-bold">French:</span> Conversational (CEFR A2 level)
-            </li>
-          </ul>
         </section>
       </div>
     </main>
