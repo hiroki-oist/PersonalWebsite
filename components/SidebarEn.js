@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function SidebarEn() {
   const [isHovered, setIsHovered] = useState(false);
