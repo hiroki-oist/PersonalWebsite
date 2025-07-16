@@ -50,6 +50,12 @@ export default function Sidebar() {
             研究業績・プロフィール
           </Link>
           <Link
+            href="/skills"
+            className="block text-blue-600 hover:underline text-lg font-semibold"
+          >
+            スキル
+          </Link>
+          <Link
             href="/activities"
             className="block text-blue-600 hover:underline text-lg font-semibold"
           >

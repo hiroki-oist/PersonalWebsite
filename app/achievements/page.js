@@ -408,23 +408,6 @@ export default function Achievements() {
             </li>
           </ol>
         </section>
-
-        {/* --- 言語 --- */}
-        <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">言語</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>
-              <span className="font-bold">英語：</span> ネイティブレベル（海外に13年在住経験あり）
-            </li>
-            <li>
-              <span className="font-bold">日本語：</span> ネイティブレベル（母国語）
-            </li>
-            <li>
-              <span className="font-bold">フランス語：</span> 日常会話レベル（CEFR A2レベル）
-            </li>
-          </ul>
-        </section>
-
       </div>
     </main>
   );

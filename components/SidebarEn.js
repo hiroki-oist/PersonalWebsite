@@ -53,6 +53,12 @@ export default function SidebarEn() {
             Academic Profile
           </Link>
           <Link
+            href="/en/skills"
+            className="block text-blue-600 hover:underline text-lg font-semibold"
+          >
+            Skills
+          </Link>
+          <Link
             href="/en/activities"
             className="block text-blue-600 hover:underline text-lg font-semibold"
           >
