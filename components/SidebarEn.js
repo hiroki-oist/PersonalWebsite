@@ -39,29 +39,29 @@ export default function SidebarEn() {
 
         {/* --- Menu --- */}
         <div className="space-y-3">
-          <a
+          <Link
             href="/en"
             className="block text-blue-600 hover:underline text-lg font-semibold"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/en/achievements"
             className="block text-blue-600 hover:underline text-lg font-semibold"
           >
             Academic Profile
-          </a>
-          <a
+          </Link>
+          <Link
             href="/en/activities"
             className="block text-blue-600 hover:underline text-lg font-semibold"
           >
             Activities
-          </a>
+          </Link>
         </div>
 
         {/* --- Social Links & Language Switch --- */}
         <div className="flex items-center space-x-4 mt-6">
-          <a
+          <Link
             href="https://www.linkedin.com/in/hiroki-sawada-1252461b6/"
             target="_blank"
             rel="noopener noreferrer"
@@ -72,8 +72,8 @@ export default function SidebarEn() {
               alt="LinkedIn"
               className="w-[50px] h-[50px]"
             />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://x.com/hiroki_oist?s=11&t=4CQ_VsR6q-vWhdPpOnwXcA"
             target="_blank"
             rel="noopener noreferrer"
@@ -84,8 +84,8 @@ export default function SidebarEn() {
               alt="Twitter"
               className="w-[50px] h-[50px]"
             />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://scholar.google.com/citations?hl=en&user=1-0jnO4AAAAJ"
             target="_blank"
             rel="noopener noreferrer"
@@ -96,8 +96,8 @@ export default function SidebarEn() {
               alt="GoogleScholar"
               className="w-[50px] h-[50px]"
             />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/hiroki-oist"
             target="_blank"
             rel="noopener noreferrer"
@@ -111,7 +111,7 @@ export default function SidebarEn() {
               alt="Github"
               className="w-[50px] h-[50px]"
             />
-          </a>
+          </Link>
 
           {/* --- Language Switch --- */}
           <button

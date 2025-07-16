@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Sidebar() {
   const [isHovered, setIsHovered] = useState(false);
@@ -38,50 +39,51 @@ export default function Sidebar() {
 
         {/* --- 項目 --- */}
         <div className="space-y-3">
-          <a href="/" className="block text-blue-600 hover:underline text-lg font-semibold">
+          <Link
+           href="/" className="block text-blue-600 hover:underline text-lg font-semibold">
             トップ
-          </a>
-          <a
+          </Link>
+          <Link
             href="/achievements"
             className="block text-blue-600 hover:underline text-lg font-semibold"
           >
             研究業績・プロフィール
-          </a>
-          <a
+          </Link>
+          <Link
             href="/activities"
             className="block text-blue-600 hover:underline text-lg font-semibold"
           >
             活動記録
-          </a>
+          </Link>
         </div>
 
         {/* --- ソーシャルリンク & 言語切替 --- */}
         <div className="flex items-center space-x-4 mt-6">
-          <a
+          <Link
             href="https://www.linkedin.com/in/hiroki-sawada-1252461b6/"
             target="_blank"
             rel="noopener noreferrer"
             className="transform transition duration-200 hover:scale-110"
           >
             <img src="/linkedin.png" alt="LinkedIn" className="w-[50px] h-[50px]" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://x.com/hiroki_oist?s=11&t=4CQ_VsR6q-vWhdPpOnwXcA"
             target="_blank"
             rel="noopener noreferrer"
             className="transform transition duration-200 hover:scale-110"
           >
             <img src="/x.png" alt="Twitter" className="w-[50px] h-[50px]" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://scholar.google.com/citations?hl=en&user=1-0jnO4AAAAJ"
             target="_blank"
             rel="noopener noreferrer"
             className="transform transition duration-200 hover:scale-110"
           >
             <img src="/GoogleScholar.png" alt="GoogleScholar" className="w-[50px] h-[50px]" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/hiroki-oist"
             target="_blank"
             rel="noopener noreferrer"
@@ -95,7 +97,7 @@ export default function Sidebar() {
               alt="Github"
               className="w-[50px] h-[50px]"
             />
-          </a>
+          </Link>
 
           {/* 言語切替 */}
           <button

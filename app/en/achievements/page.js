@@ -1,4 +1,5 @@
 import SidebarEn from "../../../components/SidebarEn";
+import Link from "next/link";
 
 export default function AchievementsEn() {
   return (
@@ -17,14 +18,14 @@ export default function AchievementsEn() {
               <span className="font-bold underline">Hiroki Sawada</span>, Wataru Ohata, and Jun Tani. (2024).
               <br />
               <em>
-                <a
+                <Link
                   href="https://ieeexplore.ieee.org/abstract/document/10734410"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
                   &quot;Human-Robot Kinaesthetic Interaction Based on The Free Energy Principle&quot;
-                </a>
+                </Link>
               </em>
               <br />
               IEEE Transactions on Systems, Man and Cybernetics: Systems.
@@ -39,14 +40,14 @@ export default function AchievementsEn() {
               <span className="font-bold underline">Hiroki Sawada</span> and Jun Tani. (2024).
               <br />
               <em>
-                <a
+                <Link
                   href="/241008_IROS_POSTER.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
                   &quot;Incremental Learning in Physical Human-Robot Interaction Using Predictive-Coding inspired Variational RNNs&quot;
-                </a>
+                </Link>
               </em>
               <br />
               IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2024, Late Breaking Poster.
@@ -77,14 +78,14 @@ export default function AchievementsEn() {
               Ueta Daichi, Riki Kobayashi, <span className="font-bold underline">Hiroki Sawada</span>, et al. (2022).
               <br />
               <em>
-                <a
+                <Link
                   href="https://journals.jps.jp/doi/abs/10.7566/JPSJ.91.094706"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
                   &quot;Anomalous Magnetic Moment Direction under Magnetic Anisotropy Originated from Crystalline Electric Field in van der Waals Compounds CeTe3 and CeTe2Se&quot;
-                </a>
+                </Link>
               </em>
               <br />
               Journal of the Physical Society of Japan 91(9):094706.
@@ -98,14 +99,14 @@ export default function AchievementsEn() {
               Azuma Nobuhiko, <span className="font-bold underline">Hiroki Sawada</span>, Itoh Houji, Sakagami Ryosuke, Matoba Masanori, Usui Hidenori, and Kamihara Yoichi. (2021).
               <br />
               <em>
-                <a
+                <Link
                   href="https://www.mssj.or.jp/zk/zk_backno/J58/NO2/mstjv58n02p64.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
                   &quot;In-gap-states of a mixed anion layered compound, polycrystalline LaCu1-deltaS0.5Se0.5O(delta~0.01) as a degenerate semiconductor&quot;
-                </a>
+                </Link>
               </em>
               <br />
               Journal of the Society of Materials Science, Japan 58, 64-68.
@@ -118,14 +119,14 @@ export default function AchievementsEn() {
                 N. Azuma, <span className="font-bold underline">H. Sawada</span>, H. Ito, R. Sakagami, Y. Tanaka, T. Fujioka, M. Matoba, and Y. Kamihara. (2024).
                 <br />
                 <em>
-                    <a
+                    <Link
                     href="https://journal.mrs-k.or.kr/articles/article/LYNR/#Information"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 underline hover:text-blue-800"
                     >
                     &quot;Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu1-δS0.5Se0.5O (δ = 0.01)&quot;
-                    </a>
+                    </Link>
                 </em>
                 <br />
                 Korean Journal of Materials Research 34, 464-474.
