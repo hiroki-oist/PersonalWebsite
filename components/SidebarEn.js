@@ -84,12 +84,15 @@ function SidebarEnContent({
 
       <h1 className="text-2xl font-bold text-gray-800 mb-2">Hiroki Sawada&apos;s Page</h1>
 
-      <p className="text-gray-600 text-sm mb-6">
-        Welcome to the personal page of Hiroki Sawada, a researcher in AI and
-        Robotics. After receiving a B.S. in Applied Physics and Informatics from
-        Keio University, I am currently pursuing a Ph.D. in AI and Robotics at
-        the Okinawa Institute of Science and Technology.
-      </p>
+      <div className="mt-2 mb-6 h-[120px] overflow-hidden">
+        <p className="text-gray-600 text-sm">
+          Welcome to the personal page of Hiroki Sawada, a researcher in AI and
+          Robotics. After receiving a B.S. in Applied Physics and Informatics from
+          Keio University, I am currently pursuing a Ph.D. in AI and Robotics at
+          the Okinawa Institute of Science and Technology.
+        </p>
+      </div>
+
 
       {/* Menu */}
       <div className="space-y-3 mb-6">
@@ -124,7 +127,6 @@ function SidebarEnContent({
       </div>
 
       {/* Social Links */}
-      <p className="text-gray-600 mb-2">Social Links</p>
       <div className="flex items-center space-x-4 mt-4">
         <Link
           href="https://www.linkedin.com/in/hiroki-sawada-1252461b6/"

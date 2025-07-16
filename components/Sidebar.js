@@ -84,11 +84,14 @@ function SidebarContent({
 
       <h1 className="text-2xl font-bold text-gray-800 mb-2">澤田拓希の個人ページ</h1>
 
-      <p className="text-gray-600 text-sm mb-6">
-        ようこそ、AIとロボティクスの研究者、澤田拓希の個人ページです。
-        慶應義塾大学理工学部物理情報工学科の学士を取得後、現在は沖縄科学技術大学院大学にて
-        AIとロボティクスを専門とした博士課程の学生です。
-      </p>
+      {/* --- 自己紹介文 --- */}
+      <div className="mt-2 mb-6 h-[120px] overflow-hidden">
+        <p className="text-gray-600 text-sm">
+          ようこそ、AIとロボティクスの研究者、澤田拓希の個人ページです。
+          慶應義塾大学理工学部物理情報工学科の学士を取得後、現在は沖縄科学技術大学院大学にて
+          AIとロボティクスを専門とした博士課程の学生です。
+        </p>
+      </div>
 
       {/* 項目 */}
       <div className="space-y-3 mb-6">
