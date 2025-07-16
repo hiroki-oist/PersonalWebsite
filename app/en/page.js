@@ -1,9 +1,9 @@
-import Sidebar from "../components/Sidebar";
+import SidebarEn from "../../components/SidebarEn";
 
-export default function Home() {
+export default function HomeEn() {
   return (
     <main className="flex min-h-screen bg-white">
-      <Sidebar />
+      <SidebarEn />
       <div className="w-3/4 relative">
         <img
           src="/BackGround.png"
