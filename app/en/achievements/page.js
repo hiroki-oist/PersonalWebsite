@@ -23,7 +23,7 @@ export default function AchievementsEn() {
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  "Human-Robot Kinaesthetic Interaction Based on The Free Energy Principle."
+                  &quot;Human-Robot Kinaesthetic Interaction Based on The Free Energy Principle&quot;
                 </a>
               </em>
               <br />
@@ -45,7 +45,7 @@ export default function AchievementsEn() {
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  “Incremental Learning in Physical Human-Robot Interaction Using Predictive-Coding inspired Variational RNNs.”
+                  &quot;Incremental Learning in Physical Human-Robot Interaction Using Predictive-Coding inspired Variational RNNs&quot;
                 </a>
               </em>
               <br />
@@ -61,7 +61,7 @@ export default function AchievementsEn() {
               <span className="font-bold underline">Hiroki Sawada</span>, Alexandre Pitti, Mathias Quoy. (2025, under review).
               <br />
               <em>
-                “CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation”
+                &quot;CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation&quot;
                 <span className="text-gray-500 text-sm ml-2">(Coming soon)</span>
               </em>
               <br />
@@ -83,7 +83,7 @@ export default function AchievementsEn() {
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  "Anomalous Magnetic Moment Direction under Magnetic Anisotropy Originated from Crystalline Electric Field in van der Waals Compounds CeTe3 and CeTe2Se."
+                  &quot;Anomalous Magnetic Moment Direction under Magnetic Anisotropy Originated from Crystalline Electric Field in van der Waals Compounds CeTe3 and CeTe2Se&quot;
                 </a>
               </em>
               <br />
@@ -104,7 +104,7 @@ export default function AchievementsEn() {
                   rel="noopener noreferrer"
                   className="text-blue-600 underline hover:text-blue-800"
                 >
-                  “In-gap-states of a mixed anion layered compound, polycrystalline LaCu1-deltaS0.5Se0.5O(delta~0.01) as a degenerate semiconductor.”
+                  &quot;In-gap-states of a mixed anion layered compound, polycrystalline LaCu1-deltaS0.5Se0.5O(delta~0.01) as a degenerate semiconductor&quot;
                 </a>
               </em>
               <br />
@@ -124,7 +124,7 @@ export default function AchievementsEn() {
                     rel="noopener noreferrer"
                     className="text-blue-600 underline hover:text-blue-800"
                     >
-                    “Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu1-δS0.5Se0.5O (δ = 0.01)”
+                    &quot;Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu1-δS0.5Se0.5O (δ = 0.01)&quot;
                     </a>
                 </em>
                 <br />
