@@ -15,7 +15,7 @@ export default function SidebarEn() {
   };
 
   return (
-    <div className="w-1/4 p-8 flex flex-col justify-between border-r border-gray-200">
+    <div className="w-1/4 p-8 flex flex-col justify-between border-r border-gray-200 fixed top-0 left-0 h-screen bg-white overflow-auto">
       <div>
         {/* --- Profile Photo --- */}
         <div className="flex justify-center mb-4">
@@ -67,6 +67,9 @@ export default function SidebarEn() {
         </div>
 
         {/* --- Social Links & Language Switch --- */}
+        <p className="text-gray-600">
+            <br /><br />Social Links
+        </p>
         <div className="flex items-center space-x-4 mt-6">
           <Link
             href="https://www.linkedin.com/in/hiroki-sawada-1252461b6/"

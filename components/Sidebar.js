@@ -64,6 +64,9 @@ export default function Sidebar() {
         </div>
 
         {/* --- ソーシャルリンク & 言語切替 --- */}
+        <p className="text-gray-600">
+            <br /><br />ソーシャルリンク
+        </p>
         <div className="flex items-center space-x-4 mt-6">
           <Link
             href="https://www.linkedin.com/in/hiroki-sawada-1252461b6/"

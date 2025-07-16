@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Achievements() {
   return (
-    <main className="flex min-h-screen bg-white">
+    <main className="flex min-h-screen bg-white ml-[25%]">
       <SidebarEn />
-      <div className="w-3/4 p-8">
+      <div className="w-1/1 p-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">Skills</h1>
 
         {/* --- Robots --- */}
@@ -14,7 +14,7 @@ export default function Achievements() {
         <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>
             <span className="font-bold">Torobo:</span> A humanoid upper-body robot developed by Tokyo Robotics, 
-            equipped with cameras and 18 degrees of freedom (DoF).
+            equipped with cameras and 18 degrees of freedom (DoF). 
             </li>
             <li>
             <span className="font-bold">Reachy:</span> A humanoid upper-body robot developed by Pollen Robotics, 
