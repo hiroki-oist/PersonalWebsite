@@ -89,10 +89,10 @@ export default function Achievements() {
             </em>
             <br />
             Journal of the Physical Society of Japan 91(9):094706.
-            <p className="ml-6 mt-1 text-sm text-gray-600">
+            {/* <p className="ml-6 mt-1 text-sm text-gray-600">
                     van der Waals化合物CeTe₃およびCeTe₂Seの磁気異方性を非弾性中性子散乱により解析し、結晶電場異方性が支配的である通常のCeTe₃に対し、
                     CeTe₂Seでは反対称スピン軌道相互作用との競合により磁気モーメントが異常にハード軸方向へ整列する機構を明らかにした。
-            </p>
+            </p> */}
             </li>
             <li>
             東伸彦，<span className="font-bold underline">澤田拓希</span>，伊藤大平，坂上良介，的場正憲，臼井秀知，神原陽一. (2021).
@@ -109,10 +109,10 @@ export default function Achievements() {
             </em>
             <br />
             材料の科学と工学 58 (2021) 64-68.
-            <p className="ml-6 mt-1 text-sm text-gray-600">
+            {/* <p className="ml-6 mt-1 text-sm text-gray-600">
                     LaCu₁₋δS₀.₅Se₀.₅O（δ≈0.01）の混合アニオン層状化合物において、
                     Cu欠損によるin‑gap state（価電子帯エッジから約0.5 eV上方）を観測し、これが電気伝導の主役であることを明らかにした。
-            </p>
+            </p> */}
             </li>
             <li>
             N. Azuma, <span className="font-bold underline">H. Sawada</span>, H. Ito, R. Sakagami, Y. Tanaka, T. Fujioka, M. Matoba, and Y. Kamihara. (2024).
@@ -129,10 +129,10 @@ export default function Achievements() {
             </em>
             <br />
             Korean Journal of Materials Research 34, 464-474.
-            <p className="ml-6 mt-1 text-sm text-gray-600">
+            {/* <p className="ml-6 mt-1 text-sm text-gray-600">
                     多結晶LaCu₁₋δS₀.₅Se₀.₅O（δ = 0.01）の熱電特性を解析し、Cu欠陥が抵抗率を低下させる一方で、ゼーベック係数の小ささによりZTが低いことを示した。
                     さらに、熱伝導率においてデバイモデルに従うフォノン挙動を確認した。
-            </p>
+            </p> */}
             </li>
         </ol>
         </section>

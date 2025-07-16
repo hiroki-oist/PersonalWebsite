@@ -89,10 +89,10 @@ export default function AchievementsEn() {
               </em>
               <br />
               Journal of the Physical Society of Japan 91(9):094706.
-              <p className="ml-6 mt-1 text-sm text-gray-600">
+              {/* <p className="ml-6 mt-1 text-sm text-gray-600">
                 Investigated magnetic anisotropy in CeTe₃ and CeTe₂Se via inelastic neutron scattering.
                 Revealed that the unusual alignment of magnetic moments along the hard axis in CeTe₂Se originates from competition between antisymmetric spin-orbit coupling and crystal electric field anisotropy.
-              </p>
+              </p> */}
             </li>
 
             <li>
@@ -110,10 +110,10 @@ export default function AchievementsEn() {
               </em>
               <br />
               Journal of the Society of Materials Science, Japan 58, 64-68.
-              <p className="ml-6 mt-1 text-sm text-gray-600">
+              {/* <p className="ml-6 mt-1 text-sm text-gray-600">
                 Observed in-gap states (~0.5 eV above the valence band edge) in LaCu₁₋δS₀.₅Se₀.₅O (δ≈0.01).
                 Identified these in-gap states as the main carriers contributing to electrical conductivity.
-              </p>
+              </p> */}
               </li>
             <li>
                 N. Azuma, <span className="font-bold underline">H. Sawada</span>, H. Ito, R. Sakagami, Y. Tanaka, T. Fujioka, M. Matoba, and Y. Kamihara. (2024).
@@ -130,11 +130,11 @@ export default function AchievementsEn() {
                 </em>
                 <br />
                 Korean Journal of Materials Research 34, 464-474.
-                <p className="ml-6 mt-1 text-sm text-gray-600">
+                {/* <p className="ml-6 mt-1 text-sm text-gray-600">
                         We investigated the thermoelectric properties of polycrystalline LaCu₁₋δS₀.₅Se₀.₅O (δ = 0.01) and 
                         demonstrated that Cu vacancies reduce resistivity but lead to a low figure of merit (ZT ≈ 6.4×10⁻⁴) due to a 
                         small Seebeck coefficient. We also confirmed Debye-like phonon behavior in its thermal conductivity.
-                </p>
+                </p> */}
             </li>
           </ol>
         </section>
