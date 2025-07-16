@@ -1,4 +1,4 @@
-import SidebarEn from "../../../components/Sidebar";
+import SidebarEn from "../../../components/SidebarEn";
 
 export default function Activities() {
   return (

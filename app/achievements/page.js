@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Achievements() {
   return (
-    <main className="flex min-h-screen bg-white">
+    <main className="flex min-h-screen bg-white ml-[25%]">
       <Sidebar />
-      <div className="w-3/4 p-8">
+      <div className="w-1/1 p-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">業績</h1>
 
         {/* --- 発表論文・学会 --- */}
@@ -69,7 +69,7 @@ export default function Achievements() {
             <p className="ml-6 mt-1 text-sm text-gray-600">
                     予測符号化とクラスEmbeddingを多層化RNNに埋め込むことで、「生成、認識、自信のメタ推論」をリアルタイムに行える新たなモデル、CERNetを提案。
                     ロボットを人が導いて手書きアルファベット26文字を教えることで、シミュレーションと実空間それぞれにおいて、学んだ26軌道の安定生成、軌道情報の推定および
-                    起動情報の推定の確度をメタ推定を行えることを示した。
+                    起動情報の推定の確度をメタ推定できることを示した。
                     奨学金を取得してフランスのラボにて外部研究員として勤務し、当該ラボの教授２名と共同研究を行った。
                     Pollen Robotics社製ヒューマノイドロボット、Reachyを使用。
             </p>

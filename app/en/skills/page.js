@@ -1,10 +1,10 @@
-import Sidebar from "../../components/Sidebar";
+import SidebarEn from "../../../components/SidebarEn";
 import Link from "next/link";
 
 export default function Achievements() {
   return (
     <main className="flex min-h-screen bg-white">
-      <Sidebar />
+      <SidebarEn />
       <div className="w-3/4 p-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">Skills</h1>
 

@@ -15,7 +15,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="w-1/4 p-8 flex flex-col justify-between border-r border-gray-200">
+    <div className="w-1/4 p-8 flex flex-col justify-between border-r border-gray-200 fixed top-0 left-0 h-screen bg-white overflow-auto">
       <div>
         {/* --- 自己紹介写真 --- */}
         <div className="flex justify-center mb-4">
