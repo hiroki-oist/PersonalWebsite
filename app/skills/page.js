@@ -5,13 +5,13 @@ export default function Achievements() {
   return (
     <main className="flex min-h-screen bg-white md:ml-[25%]">
       <Sidebar />
-      <div className="w-3/4 p-8">
+      <div className="w-1/1 p-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">スキル</h1>
 
         {/* --- ロボット --- */}
         <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">ロボット</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <h2 className="mb-4">ロボット</h2>
+          <ul className="space-y-2">
             <li>
                 <span className="font-bold">Torobo：</span> 東京ロボティクス社製ヒューマノイド上半身ロボット。カメラ搭載、全18自由度。
             </li>
@@ -26,8 +26,8 @@ export default function Achievements() {
 
         {/* --- 言語 --- */}
         <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">言語</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <h2 className="mb-4">言語</h2>
+          <ul className="space-y-2">
             <li>
               <span className="font-bold">英語：</span> 準ネイティブレベル（海外に13年在住経験、TOEIC880）
             </li>
@@ -42,8 +42,8 @@ export default function Achievements() {
 
         {/* --- プログラミングスキル --- */}
         <section className="mb-8 mt-12">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">プログラミングスキル</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <h2 className="mb-4">プログラミングスキル</h2>
+        <ul className="space-y-2">
             <li>
             <span className="font-bold">Python：</span> 機械学習・ロボティクス開発（TensorFlow、PyTorch、ROS2統合）
             </li>
@@ -61,8 +61,8 @@ export default function Achievements() {
 
         {/* --- フレームワーク & ツール --- */}
         <section className="mb-8 mt-12">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">フレームワーク & ツール</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <h2 className="mb-4">フレームワーク & ツール</h2>
+        <ul className="space-y-2">
             <li>
             <span className="font-bold">フロントエンド：</span> React、Next.js、Tailwind CSS
             </li>
@@ -80,8 +80,8 @@ export default function Achievements() {
 
         {/* --- 趣味 --- */}
         <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">趣味</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <h2 className="mb-4">趣味</h2>
+          <ul className="space-y-2">
             <li>
               <span className="font-bold">空手（古武道）:</span> 守礼堂　琉球古武道琉棍会　初段（黒帯）。
             </li>
