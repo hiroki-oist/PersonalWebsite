@@ -6,12 +6,12 @@ export default function Achievements() {
     <main className="flex min-h-screen bg-white md:ml-[25%]">
       <SidebarEn />
       <div className="w-1/1 p-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">Skills</h1>
+        <h1 className="mb-6">Skills</h1>
 
         {/* --- Robots --- */}
         <section className="mb-8 mt-12">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Robots</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <h2 className="mb-4">Robots</h2>
+        <ul className="list-disc list-inside space-y-2">
             <li>
             <span className="font-bold">Torobo:</span> A humanoid upper-body robot developed by Tokyo Robotics, 
             equipped with cameras and 18 degrees of freedom (DoF). 
@@ -29,8 +29,8 @@ export default function Achievements() {
 
         {/* --- Languages --- */}
         <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Languages</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <h2 className="mb-4">Languages</h2>
+          <ul className="list-disc list-inside space-y-2">
             <li>
               <span className="font-bold">English:</span> Near-native fluency
               (13 years of residence abroad, TOEIC 880)
@@ -47,8 +47,8 @@ export default function Achievements() {
 
         {/* --- Programming Skills --- */}
         <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Programming Skills</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <h2 className="mb-4">Programming Skills</h2>
+          <ul className="list-disc list-inside space-y-2">
             <li>
               <span className="font-bold">Python:</span> Machine learning & robotics development
               (TensorFlow, PyTorch, ROS2 integration)
@@ -70,8 +70,8 @@ export default function Achievements() {
 
         {/* --- Frameworks & Tools --- */}
         <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Frameworks & Tools</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <h2 className="mb-4">Frameworks & Tools</h2>
+          <ul className="list-disc list-inside space-y-2">
             <li>
               <span className="font-bold">Frontend:</span> React, Next.js, Tailwind CSS
             </li>
@@ -90,8 +90,8 @@ export default function Achievements() {
 
         {/* --- Hobby --- */}
         <section className="mb-8 mt-12">
-          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Hobbies</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <h2 className="mb-4">Hobbies</h2>
+          <ul className="list-disc list-inside pace-y-2">
             <li>
               <span className="font-bold">Karate(Kobudo):</span> Syureido Ryukyu-Kobudo Ryukonkai 1st-dan (black belt).
             </li>
