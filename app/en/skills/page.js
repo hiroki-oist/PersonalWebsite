@@ -8,6 +8,25 @@ export default function Achievements() {
       <div className="w-3/4 p-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">Skills</h1>
 
+        {/* --- Robots --- */}
+        <section className="mb-8 mt-12">
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Robots</h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>
+            <span className="font-bold">Torobo:</span> A humanoid upper-body robot developed by Tokyo Robotics, 
+            equipped with cameras and 18 degrees of freedom (DoF).
+            </li>
+            <li>
+            <span className="font-bold">Reachy:</span> A humanoid upper-body robot developed by Pollen Robotics, 
+            with 17 degrees of freedom (DoF).
+            </li>
+            <li>
+            <span className="font-bold">Smartphone Robot:</span> A custom-built lab robot — a small rover-type platform 
+            operated via a mounted smartphone, equipped with wheels.
+            </li>
+        </ul>
+        </section>
+
         {/* --- Languages --- */}
         <section className="mb-8 mt-12">
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">Languages</h2>
@@ -65,6 +84,19 @@ export default function Achievements() {
             </li>
             <li>
               <span className="font-bold">Development Tools:</span> Docker, Git, GitHub
+            </li>
+          </ul>
+        </section>
+
+        {/* --- Hobby --- */}
+        <section className="mb-8 mt-12">
+          <h2 className="text-2xl font-semibold text-gray-700 mb-4">Hobbies</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>
+              <span className="font-bold">Karate(Kobudo):</span> Syureido Ryukyu-Kobudo Ryukonkai 1st-dan (black belt).
+            </li>
+            <li>
+              <span className="font-bold">Scuba Diving:</span> PADI Advanced Open Water Diver.
             </li>
           </ul>
         </section>
