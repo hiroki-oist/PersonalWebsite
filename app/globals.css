@@ -7,7 +7,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@layer base {
+/* @layer base {
   h1 {
     @apply text-4xl font-bold text-gray-800 md:text-4xl text-3xl;
   }
@@ -23,7 +23,32 @@
   small {
     @apply text-gray-600 text-sm md:text-sm text-xs;
   }
+} */
+
+@layer base {
+  h1 {
+    /* PCはtext-4xl、スマホはtext-2xl */
+    @apply font-bold text-gray-800 md:text-4xl text-2xl;
+  }
+  h2 {
+    /* PCはtext-2xl、スマホはtext-lg */
+    @apply font-semibold text-gray-700 md:text-2xl text-lg;
+  }
+  p {
+    /* PCはtext-base、スマホはtext-xs */
+    @apply text-gray-700 md:text-base text-xs;
+  }
+  ol, ul, li {
+    /* PCはtext-base、スマホはtext-xs */
+    @apply text-gray-700 md:text-base text-xs;
+  }
+  small {
+    /* PCはtext-sm、スマホはさらに小さいtext-[11px]など */
+    @apply text-gray-600 md:text-sm text-[11px];
+  }
 }
+
+
 
 @theme inline {
   --color-background: var(--background);
