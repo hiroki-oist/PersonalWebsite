@@ -1,24 +1,29 @@
 import Sidebar from "../../components/Sidebar";
 import ActivityCard from "../../components/ActivityCard";
 
-export default function Activities() {
-  // 仮データ（将来的にはDBやCMSから取得可能）
-  const activities = [
-    {
-      id: "robot-demo",
-      title: "CERNet実機デモ（CY Cergy Paris University）",
-      date: "2025-02-01",
-      summary: "フランスで行ったCERNetを用いたロボット実機デモの概要。",
-      thumbnail: "/images/robot_demo.jpg",
-    },
-    {
-      id: "conference-review",
-      title: "IEEE ICDL 2025 査読活動",
-      date: "2025-05-10",
-      summary: "認知ロボティクス分野の査読者として参加した活動。",
-      thumbnail: null, // サムネなし
-    },
-  ];
+const activityModules = import.meta.glob("./*.js");
+
+export default async function Activities() {
+  const activities = [];
+
+  for (const path in activityModules) {
+    if (path.includes("page.js")) continue; // 自分自身を除外
+
+    const mod = await activityModules[path]();
+    if (mod.meta) {
+      // ファイル名から番号を抽出 (例: "./21_newest-activity.js" → 21)
+      const match = path.match(/(\d+)_/);
+      const order = match ? parseInt(match[1], 10) : 0;
+
+      activities.push({
+        ...mod.meta,
+        order, // ソート用に番号を保存
+      });
+    }
+  }
+
+  // ✅ ファイル番号の大きい順にソート
+  activities.sort((a, b) => b.order - a.order);
 
   return (
     <main className="flex min-h-screen bg-white md:ml-[25%]">
