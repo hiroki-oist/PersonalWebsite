@@ -136,13 +136,13 @@ function SidebarEnContent({
         >
           <img src="/linkedin.png" alt="LinkedIn" className="w-[40px] h-[40px]" />
         </Link>
-        <Link
+        {/* <Link
           href="https://x.com/hiroki_oist?s=11&t=4CQ_VsR6q-vWhdPpOnwXcA"
           target="_blank"
           className="transform transition duration-200 hover:scale-110"
         >
           <img src="/x.png" alt="Twitter" className="w-[40px] h-[40px]" />
-        </Link>
+        </Link> */}
         <Link
           href="https://scholar.google.com/citations?hl=en&user=1-0jnO4AAAAJ"
           target="_blank"
