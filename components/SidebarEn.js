@@ -87,7 +87,8 @@ function SidebarEnContent({
       <div className="mt-2 mb-6 h-[120px] overflow-hidden">
         <p className="text-gray-600 text-sm">
           Welcome to the personal page of Hiroki Sawada, a researcher in AI and
-          Robotics. After receiving a B.S. in Applied Physics and Informatics from
+          Robotics. 
+          After receiving a B.S. in Condensed Matter Physics from
           Keio University, I am currently pursuing a Ph.D. in AI and Robotics at
           the Okinawa Institute of Science and Technology.
         </p>
