@@ -1,29 +1,30 @@
+// app/activities/page.js
+import fs from "fs";
+import path from "path";
 import Sidebar from "../../components/Sidebar";
 import ActivityCard from "../../components/ActivityCard";
 
-const activityModules = import.meta.glob("./*.js");
+// ✅ ファイル読み込み関数
+function getActivities() {
+  const activitiesDir = path.join(process.cwd(), "app/activities");
+  const files = fs
+    .readdirSync(activitiesDir)
+    .filter((file) => /^\d+_.*\.js$/.test(file)) // 例: 21_robot-demo.js
+    .sort((a, b) => {
+      // 数字が大きいものを先に
+      const numA = parseInt(a.split("_")[0]);
+      const numB = parseInt(b.split("_")[0]);
+      return numB - numA;
+    });
 
-export default async function Activities() {
-  const activities = [];
+  return files.map((file) => {
+    const { meta } = require(path.join(activitiesDir, file));
+    return meta;
+  });
+}
 
-  for (const path in activityModules) {
-    if (path.includes("page.js")) continue; // 自分自身を除外
-
-    const mod = await activityModules[path]();
-    if (mod.meta) {
-      // ファイル名から番号を抽出 (例: "./21_newest-activity.js" → 21)
-      const match = path.match(/(\d+)_/);
-      const order = match ? parseInt(match[1], 10) : 0;
-
-      activities.push({
-        ...mod.meta,
-        order, // ソート用に番号を保存
-      });
-    }
-  }
-
-  // ✅ ファイル番号の大きい順にソート
-  activities.sort((a, b) => b.order - a.order);
+export default function Activities() {
+  const activities = getActivities();
 
   return (
     <main className="flex min-h-screen bg-white md:ml-[25%]">
