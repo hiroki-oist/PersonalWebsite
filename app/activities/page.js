@@ -1,39 +1,40 @@
 // app/activities/page.js
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 import Sidebar from "../../components/Sidebar";
 import ActivityCard from "../../components/ActivityCard";
 
-// ✅ ファイル読み込み関数
-function getActivities() {
-  const activitiesDir = path.join(process.cwd(), "app/activities");
-  const files = fs
-    .readdirSync(activitiesDir)
-    .filter((file) => /^\d+_.*\.js$/.test(file)) // 例: 21_robot-demo.js
+function loadActivities() {
+  const dir = path.join(process.cwd(), "content/activities");
+  return fs
+    .readdirSync(dir)
+    .filter((f) => /^\d+_.*\.mdx?$/.test(f))
     .sort((a, b) => {
-      // 数字が大きいものを先に
-      const numA = parseInt(a.split("_")[0]);
-      const numB = parseInt(b.split("_")[0]);
-      return numB - numA;
+      const nA = parseInt(a.split("_")[0], 10);
+      const nB = parseInt(b.split("_")[0], 10);
+      return nB - nA; // 大きい番号＝新しい
+    })
+    .map((file) => {
+      const { data } = matter(
+        fs.readFileSync(path.join(dir, file), "utf8")
+      );
+      return data; // front-matter (id, title…)
     });
-
-  return files.map((file) => {
-    const { meta } = require(path.join(activitiesDir, file));
-    return meta;
-  });
 }
 
 export default function Activities() {
-  const activities = getActivities();
+  const activities = loadActivities();
 
   return (
     <main className="flex min-h-screen bg-white md:ml-[25%]">
       <Sidebar />
-      <div className="w-1/1 p-8">
-        <h1 className="mb-6">活動記録</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {activities.map((activity) => (
-            <ActivityCard key={activity.id} {...activity} />
+      <div className="w-full p-8">
+        <h1 className="mb-6 text-3xl font-bold">活動記録</h1>
+
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+          {activities.map((meta) => (
+            <ActivityCard key={meta.id} {...meta} />
           ))}
         </div>
       </div>

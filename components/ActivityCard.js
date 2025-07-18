@@ -1,24 +1,29 @@
+// components/ActivityCard.js
 import Link from "next/link";
 
 export default function ActivityCard({ id, title, date, summary, thumbnail }) {
   return (
-    <div className="border rounded shadow p-4 flex flex-col">
+    <div className="border rounded-lg p-4 flex flex-col h-full shadow-sm">
       {thumbnail && (
         <img
           src={thumbnail}
           alt={title}
-          className="w-full h-40 object-cover rounded mb-2"
+          className="w-full h-40 object-cover rounded mb-3"
         />
       )}
-      <h2 className="text-lg font-semibold mb-1">{title}</h2>
-      <p className="text-sm text-gray-500 mb-2">{date}</p>
-      <p className="text-sm flex-grow">{summary}</p>
-      <Link
-        href={`/activities/${id}`}
-        className="mt-2 text-blue-600 text-sm hover:underline self-end"
-      >
-        詳細 →
-      </Link>
+
+      <h3 className="text-lg font-semibold mb-1 line-clamp-2">{title}</h3>
+      <p className="text-xs text-gray-500 mb-2">{date}</p>
+      <p className="text-sm text-gray-700 flex-grow line-clamp-3">{summary}</p>
+
+      <div className="mt-4 text-right">
+        <Link
+          href={`/activities/${id}`}
+          className="inline-block px-3 py-1 text-sm border rounded hover:bg-gray-100"
+        >
+          詳細 →
+        </Link>
+      </div>
     </div>
   );
 }
