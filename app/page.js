@@ -19,7 +19,7 @@ export default function Home() {
       <Sidebar />
 
       <div className="relative w-full">
-        {/* 背景画像 */}
+        {/* 背景画像：全画面表示 */}
         <img
           src="/BackGround.png"
           alt="Background"
@@ -28,12 +28,14 @@ export default function Home() {
 
         {/* ✅ 背景に重ねるコンテンツ */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-white bg-opacity-80 p-6 rounded shadow-md max-w-md">
-            <SidebarContent
-              isHovered={isHovered}
-              setIsHovered={setIsHovered}
-              switchToEnglish={switchToEnglish}
-            />
+          <div className="p-6 max-w-md">
+            <div className="bg-white bg-opacity-70 rounded-lg p-4 shadow-md">
+              <SidebarContent
+                isHovered={isHovered}
+                setIsHovered={setIsHovered}
+                switchToEnglish={switchToEnglish}
+              />
+            </div>
           </div>
         </div>
       </div>
