@@ -65,7 +65,7 @@ export default function SidebarEn() {
 }
 
 /* --- Sidebarの共通内容部分 --- */
-function SidebarEnContent({
+export function SidebarEnContent({
   isHovered,
   setIsHovered,
   switchToJapanese,
