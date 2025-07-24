@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script"; // ← GA用に追加
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,9 +20,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head /> {/* ✅ App Routerでは headタグを必ず閉じる */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* ✅ Google Analytics タグ */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NREZ3ZQ88E"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NREZ3ZQ88E');
+          `}
+        </Script>
+
         {children}
       </body>
     </html>
