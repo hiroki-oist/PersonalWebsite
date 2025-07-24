@@ -25,7 +25,6 @@ export default function Sidebar() {
           switchToEnglish={switchToEnglish}
         />
       </div>
-
       {/* --- スマホ表示（ハンバーガーメニュー） --- */}
       <div className="md:hidden fixed top-4 right-4 z-50">
         {/* ハンバーガーボタン */}
@@ -65,7 +64,7 @@ export default function Sidebar() {
 }
 
 /* --- Sidebarの共通内容部分 --- */
-function SidebarContent({
+export function SidebarContent({
   isHovered,
   setIsHovered,
   switchToEnglish,
