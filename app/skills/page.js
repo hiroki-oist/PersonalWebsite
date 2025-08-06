@@ -83,7 +83,7 @@ export default function Achievements() {
           <h2 className="mb-4">趣味</h2>
           <ul className="list-disc list-inside space-y-2">
             <li>
-              <span className="font-bold">空手（古武道）:</span> 守礼堂　琉球古武道琉棍会　二段（黒帯）
+              <span className="font-bold">空手（古武道）:</span>琉球古武道琉棍会守道館　二段（黒帯）
             </li>
             <li>
               <span className="font-bold">囲碁:</span> 三段

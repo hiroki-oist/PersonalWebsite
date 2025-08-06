@@ -93,10 +93,13 @@ export default function Achievements() {
           <h2 className="mb-4">Hobbies</h2>
           <ul className="list-disc list-inside pace-y-2">
             <li>
-              <span className="font-bold">Karate(Kobudo):</span> Syureido Ryukyu-Kobudo Ryukonkai 1st-dan (black belt).
+              <span className="font-bold">Karate(Kobudo):</span> Ryukyu-Kobudo Ryukonkai Syudo-kan 1st-dan (black belt)
             </li>
             <li>
-              <span className="font-bold">Scuba Diving:</span> PADI Advanced Open Water Diver.
+              <span className="font-bold">Go:</span> 3rd-dan
+            </li>
+            <li>
+              <span className="font-bold">Scuba Diving:</span> PADI Advanced Open Water Diver
             </li>
           </ul>
         </section>
