@@ -29,7 +29,7 @@ export default function Achievements() {
           <h2 className="mb-4">言語</h2>
           <ul className="list-disc list-inside space-y-2">
             <li>
-              <span className="font-bold">英語：</span> 準ネイティブレベル（海外に13年在住経験、TOEIC880）
+              <span className="font-bold">英語：</span> 準ネイティブレベル（海外に13年在住経験、TOEIC975）
             </li>
             <li>
               <span className="font-bold">日本語：</span> ネイティブレベル（母国語）

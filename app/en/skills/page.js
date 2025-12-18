@@ -33,7 +33,7 @@ export default function Achievements() {
           <ul className="list-disc list-inside space-y-2">
             <li>
               <span className="font-bold">English:</span> Near-native fluency
-              (13 years of residence abroad, TOEIC 880)
+              (13 years of residence abroad, TOEIC 975)
             </li>
             <li>
               <span className="font-bold">Japanese:</span> Native (mother tongue)
@@ -93,7 +93,7 @@ export default function Achievements() {
           <h2 className="mb-4">Hobbies</h2>
           <ul className="list-disc list-inside pace-y-2">
             <li>
-              <span className="font-bold">Karate(Kobudo):</span> Ryukyu-Kobudo Ryukonkai Syudo-kan 1st-dan (black belt)
+              <span className="font-bold">Karate(Kobudo):</span> Ryukyu-Kobudo Ryukonkai Syudo-kan 2nd-dan (black belt)
             </li>
             <li>
               <span className="font-bold">Go:</span> 3rd-dan
