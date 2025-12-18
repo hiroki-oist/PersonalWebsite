@@ -64,16 +64,16 @@ export default function Achievements() {
         <h2 className="mb-4">フレームワーク & ツール</h2>
         <ul className="list-disc list-inside space-y-2">
             <li>
-            <span className="font-bold">フロントエンド：</span> React、Next.js、Tailwind CSS
+              <span className="font-bold">フロントエンド：</span> React、Next.js、Tailwind CSS
             </li>
             <li>
-            <span className="font-bold">クラウド・インフラ：</span> AWS（EC2、S3、SageMaker、Lambdaなど）
+              <span className="font-bold">クラウド・インフラ：</span> AWS（EC2、S3、SageMaker、Lambdaなど）
             </li>
             <li>
-            <span className="font-bold">データベース：</span> MySQL
+              <span className="font-bold">データベース：</span> MySQL
             </li>
             <li>
-            <span className="font-bold">開発ツール：</span> Docker、Git、GitHub 
+              <span className="font-bold">開発ツール：</span> Docker、Git、GitHub 
             </li>
         </ul>
         </section>
