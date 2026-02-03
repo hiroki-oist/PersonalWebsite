@@ -60,14 +60,14 @@ export default function AchievementsEn() {
             </li>
 
             <li>
-              <span className="font-bold underline">Hiroki Sawada</span>, Alexandre Pitti, Mathias Quoy. (2025, under review).
+              <span className="font-bold underline">Hiroki Sawada</span>, Alexandre Pitti, Mathias Quoy. (2026).
               <br />
               <em>
                 &quot;CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation&quot;
                 <span className="text-gray-500 ml-2">(Coming soon)</span>
               </em>
               <br />
-              IEEE Robotics and Automation Letters (RA-L).
+              Proceedings in IEEE ICRA2026 (accepted).
               <p className="ml-6 mt-1 text-gray-600">
                 Proposed CERNet, a hierarchical predictive-coding RNN with class embedding,
                 enabling unified real-time motion generation, recognition, and meta-inference of confidence.
