@@ -168,7 +168,7 @@ export default function AchievementsEn() {
                   <li>
                     Proposed a new hierarchical predictive-coding RNN model (CERNet) integrating generation, recognition, and confidence estimation into a unified lightweight model.
                     Demonstrated real-time generation, intention inference, and meta-inference of confidence in a real-world handwriting task using a physical robot.
-                    Submitted to IEEE RA-L [3].
+                    Submitted to IEEE ICRA 2026 [3].
                   </li>
                 </ul>
               </div>
