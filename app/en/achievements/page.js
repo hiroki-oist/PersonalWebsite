@@ -63,8 +63,14 @@ export default function AchievementsEn() {
               <span className="font-bold underline">Hiroki Sawada</span>, Alexandre Pitti, Mathias Quoy. (2026).
               <br />
               <em>
-                &quot;CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation&quot;
-                <span className="text-gray-500 ml-2">(Coming soon)</span>
+                <Link
+                  href="https://arxiv.org/abs/2512.07041"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline hover:text-blue-800"
+                >
+                  &quot;CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation&quot;
+                </Link>
               </em>
               <br />
               Proceedings in IEEE ICRA2026 (accepted).
