@@ -96,7 +96,7 @@ export default function Home() {
             </div>
 
             <img
-              src="/assets/home/robot-silhouettes.svg"
+              src="/assets/home/robot-silhouettes.png"
               alt=""
               aria-hidden="true"
               className="pointer-events-none absolute -bottom-12 -left-20 w-[420px] opacity-90"
