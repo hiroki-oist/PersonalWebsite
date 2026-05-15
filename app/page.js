@@ -15,15 +15,58 @@ export default function Home() {
     <main className="min-h-screen bg-[#FBF6EF] text-[#2E2A27]">
       <Header switchToEnglish={switchToEnglish} />
 
-      <section className="relative overflow-hidden">
-        <img
-          src="/assets/home/hero-orbit-lines.svg"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-80"
-        />
+      <section className="relative overflow-hidden bg-[#FBF6EF]">
+      {/* Orbit / network background */}
+      <img
+        src="/assets/home/hero-orbit-lines.svg"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-80"
+      />
 
-        <div className="relative mx-auto grid min-h-[760px] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:px-10 lg:px-14">
+      {/* Robot collage background */}
+      <img
+        src="/assets/home/robot-silhouettes.png"
+        alt=""
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          bottom-[-70px]
+          left-1/2
+          z-[1]
+          w-[980px]
+          max-w-none
+          -translate-x-1/2
+          opacity-55
+          mix-blend-multiply
+          md:bottom-[-95px]
+          md:left-[58%]
+          md:w-[1150px]
+          lg:bottom-[-110px]
+          lg:left-[59%]
+          lg:w-[1250px]
+        "
+      />
+
+      {/* Soft mask so the robot image does not fight with text */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          inset-y-0
+          left-0
+          z-[2]
+          w-[55%]
+          bg-gradient-to-r
+          from-[#FBF6EF]
+          via-[#FBF6EF]/92
+          to-transparent
+        "
+      />
+
+      <div className="relative z-10 mx-auto grid min-h-[760px] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:px-10 lg:px-14">
           <div className="z-10 max-w-2xl">
             <p className="mb-5 text-sm font-semibold tracking-[0.22em] text-[#B86524]">
               AI × ROBOTICS × EMBODIED INTELLIGENCE
@@ -94,13 +137,6 @@ export default function Home() {
                 <div className="pointer-events-none absolute -right-10 top-10 h-[420px] w-[420px] rounded-full border border-[#D99455]/50" />
               </div>
             </div>
-
-            <img
-              src="/assets/home/robot-silhouettes.png"
-              alt=""
-              aria-hidden="true"
-              className="pointer-events-none absolute -bottom-12 -left-20 w-[420px] opacity-90"
-            />
           </div>
         </div>
       </section>
