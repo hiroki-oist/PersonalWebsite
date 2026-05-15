@@ -1,0 +1,7 @@
+<svg width="160" height="48" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="48" rx="14" fill="none"/>
+  <text x="6" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#B86524">H</text>
+  <text x="31" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="700" fill="#2E2A27">S</text>
+  <path d="M24 12 C34 7, 42 13, 35 22 C27 32, 16 27, 22 17" stroke="#D99455" stroke-width="1.6" fill="none" opacity="0.85"/>
+  <text x="64" y="31" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="650" fill="#2E2A27">Hiroki Sawada</text>
+</svg>
