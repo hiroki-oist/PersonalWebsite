@@ -120,11 +120,9 @@ export default function SkillsEn() {
             </p>
 
             <h1 className="font-serif text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#2E2A27] md:text-7xl">
-              Robotics,
+              Skills &
               <br />
-              Programming
-              <br />
-              <span className="text-[#B86524]">& Human Skills</span>
+              <span className="text-[#B86524]">Experiences</span>
             </h1>
 
             <p className="mt-8 max-w-3xl text-base leading-8 text-[#4C4540] md:text-lg">
