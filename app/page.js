@@ -186,13 +186,17 @@ function Header({ switchToEnglish }) {
             Contact
           </a>
 
-          <button
-            type="button"
-            onClick={switchToEnglish}
-            className="rounded-full border border-[#D8B98E] px-3 py-1 text-xs text-[#8D542B] transition hover:bg-white"
-          >
-            JP | EN
-          </button>
+          <div className="flex items-center gap-1 rounded-full border border-[#D8B98E] px-3 py-1 text-xs font-semibold text-[#8D542B]">
+            <span className="text-[#B86524]">JP</span>
+            <span className="text-[#C8A982]">|</span>
+            <button
+              type="button"
+              onClick={switchToEnglish}
+              className="transition hover:text-[#B86524]"
+            >
+              EN
+            </button>
+          </div>
         </nav>
       </div>
     </header>

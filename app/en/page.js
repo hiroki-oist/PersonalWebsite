@@ -189,13 +189,17 @@ function HeaderEn({ switchToJapanese }) {
             Contact
           </a>
 
-          <button
-            type="button"
-            onClick={switchToJapanese}
-            className="rounded-full border border-[#D8B98E] px-3 py-1 text-xs text-[#8D542B] transition hover:bg-white"
-          >
-            JP
-          </button>
+          <div className="flex items-center gap-1 rounded-full border border-[#D8B98E] px-3 py-1 text-xs font-semibold text-[#8D542B]">
+            <button
+              type="button"
+              onClick={switchToJapanese}
+              className="transition hover:text-[#B86524]"
+            >
+              JP
+            </button>
+            <span className="text-[#C8A982]">|</span>
+            <span className="text-[#B86524]">EN</span>
+          </div>
         </nav>
       </div>
     </header>
