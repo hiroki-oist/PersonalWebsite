@@ -1,41 +1,41 @@
-import Link from "next/link";
+// app/skills/page.jsx
 
 const robotSkills = [
   {
     name: "Torobo",
-    maker: "Tokyo Robotics",
+    maker: "東京ロボティクス",
     text: "東京ロボティクス社製ヒューマノイド上半身ロボット。カメラ搭載、全18自由度。",
-    tags: ["Humanoid Robot", "18 DoF", "Kinaesthetic HRI"],
+    tags: ["ヒューマノイド", "18自由度", "力覚HRI"],
   },
   {
     name: "Reachy",
     maker: "Pollen Robotics",
     text: "Pollen Robotics社製ヒューマノイド上半身ロボット。全17自由度。",
-    tags: ["Humanoid Robot", "17 DoF", "Real-world HRI"],
+    tags: ["ヒューマノイド", "17自由度", "実ロボット実験"],
   },
   {
-    name: "Smartphone Robot",
-    maker: "Lab-built Robot",
+    name: "スマートフォンロボット",
+    maker: "ラボ自作ロボット",
     text: "ラボ自作の小型ローバ型ロボット。スマートフォン搭載で動作、車輪駆動。",
-    tags: ["Mobile Robot", "Computer Vision", "Wheeled Platform"],
+    tags: ["小型移動ロボット", "画像認識", "車輪駆動"],
   },
 ];
 
 const languageSkills = [
   {
-    name: "English",
-    level: "Near-native",
+    name: "英語",
+    level: "準ネイティブレベル",
     text: "海外に13年在住経験。TOEIC 975。",
   },
   {
-    name: "Japanese",
-    level: "Native",
+    name: "日本語",
+    level: "ネイティブ",
     text: "母国語。",
   },
   {
-    name: "French",
-    level: "Conversational / CEFR A2",
-    text: "パリに6ヶ月間研究員として滞在。",
+    name: "フランス語",
+    level: "日常会話レベル / CEFR A2",
+    text: "パリに6ヶ月間、研究員として滞在。",
   },
 ];
 
@@ -43,58 +43,58 @@ const programmingSkills = [
   {
     name: "Python",
     text: "機械学習・ロボティクス開発。TensorFlow、PyTorch、ROS2統合。",
-    tags: ["Machine Learning", "Robotics", "PyTorch", "TensorFlow", "ROS2"],
+    tags: ["機械学習", "ロボティクス", "PyTorch", "TensorFlow", "ROS2"],
   },
   {
     name: "C++",
     text: "ロボット向けアルゴリズム実装。Eigenを用いたテンソルでの独自変分RNNの実装・ライブラリ作成。",
-    tags: ["Robotics", "Eigen", "Variational RNN", "Numerical Computing"],
+    tags: ["ロボティクス", "Eigen", "変分RNN", "数値計算"],
   },
   {
     name: "JavaScript / Node.js",
     text: "フルスタック開発。バックエンド設計からデプロイまで一貫対応。",
-    tags: ["Backend", "Full-stack", "API", "Deployment"],
+    tags: ["バックエンド", "フルスタック", "API", "デプロイ"],
   },
   {
     name: "Swift",
     text: "iOSアプリ開発。カジュアルゲーム、iPhoneゲームアプリを開発中。",
-    tags: ["iOS", "SpriteKit", "Game App"],
+    tags: ["iOS", "SpriteKit", "ゲームアプリ"],
   },
 ];
 
 const toolSkills = [
   {
-    category: "Frontend",
+    category: "フロントエンド",
     items: ["React", "Next.js", "Tailwind CSS"],
   },
   {
-    category: "Cloud / Infrastructure",
+    category: "クラウド・インフラ",
     items: ["AWS EC2", "AWS S3", "SageMaker", "Lambda"],
   },
   {
-    category: "Database",
+    category: "データベース",
     items: ["MySQL"],
   },
   {
-    category: "Development Tools",
+    category: "開発ツール",
     items: ["Docker", "Git", "GitHub"],
   },
 ];
 
 const interests = [
   {
-    name: "Karate / Kobudo",
+    name: "空手・古武道",
     text: "琉球古武道琉棍会守道館 二段。第九回沖縄県古武道選手権大会 サイの部 三位。",
-    tags: ["Black Belt", "Ryukyu Kobudo"],
+    tags: ["黒帯", "琉球古武道", "サイ"],
   },
   {
-    name: "Go",
+    name: "囲碁",
     text: "三段。",
-    tags: ["3-dan"],
+    tags: ["三段"],
   },
   {
-    name: "Scuba Diving",
-    text: "PADI Advanced Open Water Diver。",
+    name: "スキューバダイビング",
+    text: "PADI アドバンスド・オープン・ウォーター・ダイバー。",
     tags: ["PADI AOW"],
   },
 ];
@@ -122,11 +122,11 @@ export default function Skills() {
             </p>
 
             <h1 className="font-serif text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#2E2A27] md:text-7xl">
-              Robotics,
+              スキル,
               <br />
-              Programming
+              ロボティクス
               <br />
-              <span className="text-[#B86524]">& Human Skills</span>
+              <span className="text-[#B86524]">& 経験</span>
             </h1>
 
             <p className="mt-8 max-w-3xl text-base leading-8 text-[#4C4540] md:text-lg">
@@ -139,7 +139,7 @@ export default function Skills() {
                 href="#robotics"
                 className="inline-flex items-center gap-3 rounded-2xl bg-[#B86524] px-6 py-4 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(184,101,36,0.28)] transition hover:-translate-y-0.5 hover:bg-[#A8581F]"
               >
-                View Skills
+                スキルを見る
                 <span aria-hidden="true">→</span>
               </a>
 
@@ -147,7 +147,7 @@ export default function Skills() {
                 href="/achievements"
                 className="inline-flex items-center gap-3 rounded-2xl border border-[#D8B98E] bg-white/75 px-6 py-4 text-sm font-semibold text-[#2E2A27] shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-white"
               >
-                Research Profile
+                研究業績を見る
                 <span aria-hidden="true">→</span>
               </a>
             </div>
@@ -163,46 +163,52 @@ export default function Skills() {
             <p className="mb-4 text-xs font-bold tracking-[0.22em] text-[#B86524]">
               CONTENTS
             </p>
+
             <nav className="space-y-2 text-sm font-medium text-[#5D534C]">
-              <SideLink href="#robotics">Robotics</SideLink>
-              <SideLink href="#languages">Languages</SideLink>
-              <SideLink href="#programming">Programming</SideLink>
-              <SideLink href="#tools">Frameworks & Tools</SideLink>
-              <SideLink href="#interests">Interests</SideLink>
+              <SideLink href="#robotics">ロボット</SideLink>
+              <SideLink href="#languages">言語</SideLink>
+              <SideLink href="#programming">プログラミング</SideLink>
+              <SideLink href="#tools">フレームワーク・ツール</SideLink>
+              <SideLink href="#interests">趣味・活動</SideLink>
             </nav>
           </div>
         </aside>
 
         <div className="space-y-20">
-          <Section id="robotics" label="ROBOTICS" title="Robotic Platforms">
+          <Section id="robotics" label="ROBOTICS" title="ロボット経験">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
               {robotSkills.map((robot) => (
                 <FeatureCard key={robot.name}>
                   <p className="text-sm font-semibold text-[#B86524]">
                     {robot.maker}
                   </p>
+
                   <h3 className="mt-3 font-serif text-3xl font-semibold text-[#2E2A27]">
                     {robot.name}
                   </h3>
+
                   <p className="mt-4 text-base leading-7 text-[#4C4540]">
                     {robot.text}
                   </p>
+
                   <TagList tags={robot.tags} />
                 </FeatureCard>
               ))}
             </div>
           </Section>
 
-          <Section id="languages" label="LANGUAGES" title="Languages">
+          <Section id="languages" label="LANGUAGES" title="言語">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
               {languageSkills.map((language) => (
                 <FeatureCard key={language.name}>
                   <p className="text-sm font-semibold text-[#B86524]">
                     {language.level}
                   </p>
+
                   <h3 className="mt-3 font-serif text-3xl font-semibold text-[#2E2A27]">
                     {language.name}
                   </h3>
+
                   <p className="mt-4 text-base leading-7 text-[#4C4540]">
                     {language.text}
                   </p>
@@ -211,29 +217,36 @@ export default function Skills() {
             </div>
           </Section>
 
-          <Section id="programming" label="PROGRAMMING" title="Programming Skills">
+          <Section id="programming" label="PROGRAMMING" title="プログラミング">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {programmingSkills.map((skill) => (
                 <FeatureCard key={skill.name}>
                   <h3 className="font-serif text-3xl font-semibold text-[#2E2A27]">
                     {skill.name}
                   </h3>
+
                   <p className="mt-4 text-base leading-7 text-[#4C4540]">
                     {skill.text}
                   </p>
+
                   <TagList tags={skill.tags} />
                 </FeatureCard>
               ))}
             </div>
           </Section>
 
-          <Section id="tools" label="FRAMEWORKS & TOOLS" title="Frameworks & Tools">
+          <Section
+            id="tools"
+            label="FRAMEWORKS & TOOLS"
+            title="フレームワーク・ツール"
+          >
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {toolSkills.map((group) => (
                 <FeatureCard key={group.category}>
                   <h3 className="font-serif text-3xl font-semibold text-[#2E2A27]">
                     {group.category}
                   </h3>
+
                   <div className="mt-5 flex flex-wrap gap-2">
                     {group.items.map((item) => (
                       <span
@@ -249,16 +262,18 @@ export default function Skills() {
             </div>
           </Section>
 
-          <Section id="interests" label="INTERESTS" title="Interests">
+          <Section id="interests" label="INTERESTS" title="趣味・活動">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
               {interests.map((item) => (
                 <FeatureCard key={item.name}>
                   <h3 className="font-serif text-3xl font-semibold text-[#2E2A27]">
                     {item.name}
                   </h3>
+
                   <p className="mt-4 text-base leading-7 text-[#4C4540]">
                     {item.text}
                   </p>
+
                   <TagList tags={item.tags} />
                 </FeatureCard>
               ))}
@@ -295,21 +310,26 @@ function Header() {
           <a className="transition hover:text-[#B86524]" href="/">
             Top
           </a>
+
           <a className="transition hover:text-[#B86524]" href="/achievements">
             Research & Profile
           </a>
+
           <a className="text-[#B86524]" href="/skills">
             Skills
           </a>
+
           <a className="transition hover:text-[#B86524]" href="/activities">
             Activities
           </a>
+
           <a
             className="transition hover:text-[#B86524]"
             href="mailto:hiroki1998@gmail.com"
           >
             Contact
           </a>
+
           <a
             href="/en/skills"
             className="rounded-full border border-[#D8B98E] px-3 py-1 text-xs text-[#8D542B] transition hover:bg-white"
@@ -325,20 +345,20 @@ function Header() {
 function SkillOverview() {
   const items = [
     {
-      value: "Robotics",
-      label: "Torobo, Reachy, and lab-built mobile robots",
+      value: "ロボティクス",
+      label: "Torobo、Reachy、ラボ自作ロボットを用いた実機研究",
     },
     {
       value: "AI / RNN",
-      label: "Predictive coding, PV-RNN, and robot learning",
+      label: "予測符号化、PV-RNN、ロボット学習",
     },
     {
-      value: "Full-stack",
-      label: "Next.js, Node.js, AWS, and MySQL",
+      value: "フルスタック",
+      label: "Next.js、Node.js、AWS、MySQLを用いた開発",
     },
     {
-      value: "Languages",
-      label: "Japanese, English, and French",
+      value: "言語",
+      label: "日本語、英語、フランス語",
     },
   ];
 
@@ -353,6 +373,7 @@ function SkillOverview() {
             <p className="font-serif text-2xl font-semibold text-[#2E2A27]">
               {item.value}
             </p>
+
             <p className="mt-2 text-sm leading-5 text-[#6E6259]">
               {item.label}
             </p>
@@ -369,9 +390,11 @@ function Section({ id, label, title, children }) {
       <p className="mb-4 text-xs font-bold tracking-[0.22em] text-[#B86524]">
         {label}
       </p>
+
       <h2 className="mb-8 font-serif text-4xl font-semibold tracking-[-0.03em] text-[#2E2A27] md:text-5xl">
         {title}
       </h2>
+
       {children}
     </section>
   );
