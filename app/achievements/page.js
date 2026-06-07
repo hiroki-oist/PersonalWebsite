@@ -425,10 +425,7 @@ function Header() {
           <a className="transition hover:text-[#B86524]" href="/activities">
             Activities
           </a>
-          <a
-            className="transition hover:text-[#B86524]"
-            href="mailto:hiroki1998@gmail.com"
-          >
+          <a className="transition hover:text-[#B86524]" href="/contact">
             Contact
           </a>
           <a

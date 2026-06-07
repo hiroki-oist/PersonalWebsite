@@ -182,7 +182,7 @@ function Header({ switchToEnglish }) {
           <a className="transition hover:text-[#B86524]" href="/activities">
             Activities
           </a>
-          <a className="transition hover:text-[#B86524]" href="mailto:hiroki1998@gmail.com">
+          <a className="transition hover:text-[#B86524]" href="/en/contact">
             Contact
           </a>
 
