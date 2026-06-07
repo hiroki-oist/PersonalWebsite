@@ -12,6 +12,12 @@ const contactLinks = [
     external: true,
   },
   {
+    label: "GitHub",
+    value: "hiroki-oist",
+    href: "https://github.com/hiroki-oist",
+    external: true,
+  },
+  {
     label: "X",
     value: "@hiroki_research",
     href: "https://x.com/hiroki_research",
@@ -149,20 +155,20 @@ function Header() {
 function ContactOverview() {
   const items = [
     {
-      value: "Google Scholar",
-      label: "Research publications and citation profile",
+      value: "Scholar",
+      label: "論文・引用情報",
     },
     {
       value: "LinkedIn",
-      label: "Professional profile",
+      label: "職歴・研究プロフィール",
+    },
+    {
+      value: "GitHub",
+      label: "コード・開発プロジェクト",
     },
     {
       value: "X",
-      label: "Research updates",
-    },
-    {
-      value: "Email",
-      label: "Private and official contact addresses",
+      label: "研究活動の発信",
     },
   ];
 
