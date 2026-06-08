@@ -276,7 +276,7 @@ export default function AchievementsEn() {
               </a>
 
               <a
-                href="/cv.pdf"
+                href="/cv_en.pdf"
                 className="inline-flex items-center gap-3 rounded-2xl border border-[#D8B98E] bg-white/75 px-6 py-4 text-sm font-semibold text-[#2E2A27] shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-white"
               >
                 Download CV
