@@ -1,0 +1,55 @@
+---
+id: icra_2026
+title: ICRA2026 @ウィーン
+date: "2026-06-08"
+summary: ウィーンで開催されたIEEE International Conference on Robotics and Automation（ICRA）2026に参加し、CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation についてポスター発表を行いました。本研究では、クラスEmbeddingと予測符号化RNNを組み合わせることで、ロボット運動の生成・認識・自信推定を単一モデルで統一的に扱うCERNetを提案しました。論文はProceedingsとして今後公開される予定です。
+thumbnail: /activities/3_icra_2026/icra_tumbnail.jpg
+---
+
+ウィーンで開催されたIEEE International Conference on Robotics and Automation（ICRA）2026に参加し、CERNetに関する研究発表を行いました。
+
+<br />
+
+今回発表した論文は、**CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation** です。
+
+<br />
+
+本研究では、予測符号化とクラスEmbeddingを組み込んだ再帰型ニューラルネットワークモデルであるCERNetを提案しました。CERNetは、ロボット運動の生成、観測された運動の認識、さらにその認識に対する自信推定を、単一のRNNモデル内で統一的に扱うことを目的としています。
+
+<br />
+
+従来、生成・認識・確信度推定のような機能は、複数のモジュールを組み合わせて実現されることが多いですが、CERNetではこれらを一つの予測誤差最小化の枠組みから導く点に特徴があります。これにより、実ロボット上でも比較的軽量に、リアルタイムな生成・認識・メタ推論を行うことを目指しました。
+
+<br />
+
+実験では、Pollen Robotics社製のヒューマノイドロボットReachyを用い、手書きアルファベット軌道の生成・認識・自信推定を検証しました。シミュレーションだけでなく実空間のロボットでも評価を行い、学習済み軌道の安定生成、入力軌道のクラス推定、さらに認識結果に対する確信度の推定が可能であることを示しました。
+
+<br />
+
+今回のICRAではポスター発表として参加し、多くの研究者とCERNetのモデル構造、予測符号化との関係、実ロボット応用の可能性について議論することができました。特に、生成モデルとしてのRNNを単なる軌道生成器に留めず、認識や自信推定まで含めた統一的な認知モデルとして扱う方向性について、有意義なフィードバックを得ることができました。
+
+<br />
+
+論文はICRA 2026のProceedingsとして今後公開される予定です。現時点での論文リンクと参加証を以下に示します。
+
+<br />
+
+<a
+  href="https://arxiv.org/abs/2512.07041"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  CERNet論文はこちら
+</a>
+
+<br />
+
+<a
+  href="/activities/3_icra_2026/icra_2026_certificate.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  参加証はこちら
+</a>

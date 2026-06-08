@@ -1,0 +1,55 @@
+---
+id: icra_2026
+title: ICRA 2026 @ Vienna
+date: "2026-06-08"
+summary: I attended the IEEE International Conference on Robotics and Automation (ICRA) 2026 in Vienna and presented our work, CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation, as a poster presentation. In this work, we proposed CERNet, a unified model that combines class embedding with a predictive-coding RNN to handle robot motion generation, recognition, and confidence estimation within a single model. The paper is expected to be published in the conference proceedings.
+thumbnail: /activities/3_icra_2026/icra_tumbnail.jpg
+---
+
+I attended the IEEE International Conference on Robotics and Automation (ICRA) 2026 in Vienna and presented our work on CERNet.
+
+<br />
+
+The paper I presented was **CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation**.
+
+<br />
+
+In this work, we proposed CERNet, a recurrent neural network model that integrates predictive coding with class embedding. CERNet is designed to handle robot motion generation, recognition of observed motion, and confidence estimation for the recognition result within a single RNN model.
+
+<br />
+
+Conventionally, functions such as generation, recognition, and confidence estimation are often implemented by combining multiple modules. In contrast, CERNet aims to derive these functions from a unified predictive-error minimization framework. This makes it possible to perform real-time generation, recognition, and meta-inference on a physical robot with a relatively lightweight model.
+
+<br />
+
+In the experiments, we used Reachy, a humanoid robot developed by Pollen Robotics, and evaluated the model on handwritten alphabet trajectories. We tested CERNet not only in simulation but also on a real robot, showing that it can stably reproduce learned trajectories, infer the class of observed trajectories, and estimate confidence in its own recognition results.
+
+<br />
+
+At ICRA 2026, I presented this work as a poster and had discussions with many researchers about the model architecture of CERNet, its relationship to predictive coding, and its potential applications to real-world robotics. In particular, I received useful feedback on the direction of treating RNN-based generative models not merely as trajectory generators, but as unified cognitive models that include recognition and confidence estimation.
+
+<br />
+
+The paper is expected to be published in the ICRA 2026 proceedings. The current paper link and certificate of participation are shown below.
+
+<br />
+
+<a
+  href="https://arxiv.org/abs/2512.07041"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  CERNet paper
+</a>
+
+<br />
+
+<a
+  href="/activities/3_icra_2026/icra_2026_certificate.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  Certificate of participation
+</a>
