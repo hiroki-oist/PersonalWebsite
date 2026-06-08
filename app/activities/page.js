@@ -154,7 +154,7 @@ function ActivityOverview({ count }) {
       label: "Activity entries",
     },
     {
-      value: "IROS 2024",
+      value: "IROS 2024, ICRA 2026",
       label: "International conference participation",
     },
     {
