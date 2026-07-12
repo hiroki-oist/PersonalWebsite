@@ -75,7 +75,7 @@ export function SidebarContent({
       {/* 自己紹介写真 */}
       <div className="flex justify-center mb-4">
         <img
-          src="/SelfIntroPhoto.jpg"
+          src="/SelfIntroPhoto.webp"
           alt="Hiroki Sawada"
           className="w-32 h-32 object-cover object-top rounded-full shadow-md"
         />

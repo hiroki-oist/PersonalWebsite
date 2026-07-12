@@ -26,7 +26,7 @@ export default function HomeEn() {
         />
 
         <img
-          src="/assets/home/robot-silhouettes.png"
+          src="/assets/home/robot-silhouettes.webp"
           alt=""
           aria-hidden="true"
           className="
@@ -126,7 +126,7 @@ export default function HomeEn() {
             <div className="relative overflow-hidden rounded-[42px] border border-white/70 bg-white/35 p-3 shadow-[0_30px_90px_rgba(46,42,39,0.18)] backdrop-blur">
               <div className="relative overflow-hidden rounded-[34px]">
                 <img
-                  src="/Hiroki_Sawada.png"
+                  src="/Hiroki_Sawada.webp"
                   alt="Hiroki Sawada"
                   className="h-[520px] w-full object-cover"
                 />

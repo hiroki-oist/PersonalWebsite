@@ -45,7 +45,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const activity = loadActivityBySlug(params.slug);
+  const { slug } = await params;
+  const activity = loadActivityBySlug(slug);
 
   if (!activity) {
     return {
@@ -60,7 +61,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ActivityDetailEn({ params }) {
-  const activity = loadActivityBySlug(params.slug);
+  const { slug } = await params;
+  const activity = loadActivityBySlug(slug);
 
   if (!activity) {
     notFound();
