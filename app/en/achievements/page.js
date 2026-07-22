@@ -101,6 +101,17 @@ const publications = [
 
 const researchHistory = [
   {
+    period: "Apr. 2026 – present",
+    title: "Body Integration Learning Framework for Highly Skilled Robots (CREST)",
+    institution: "Sony Computer Science Laboratories, Humanity Science Project",
+    location: "Tokyo, Japan",
+    advisors: "Project Researcher",
+    points: [
+      "Leading the setup of physical human-robot interaction experiments as a Project Researcher.",
+      "Using the open-source humanoid robot “OpenArm” by Enactic.",
+    ],
+  },
+  {
     period: "Jan. 2025 – Jul. 2025",
     title:
       "Proposal and Real-Robot Demonstration of CERNet: A Unified Predictive-Coding RNN for Generation, Recognition, and Confidence Estimation",
@@ -115,7 +126,7 @@ const researchHistory = [
     ],
   },
   {
-    period: "Sep. 2021 – present",
+    period: "Sep. 2021 – Jun. 2026",
     title:
       "Human-Robot Kinaesthetic Interaction Based on the Free Energy Principle",
     institution:
@@ -169,7 +180,17 @@ const researchHistory = [
 
 const workHistory = [
   {
-    period: "Sep. 2023 – present",
+    period: "Mar. 2026 – Apr. 2026",
+    title: "Designing Scientific Prompts and Evaluation Frameworks for AI Systems",
+    institution: "Mercor (Bilingual Japanese STEM Expert Writer & Editor)",
+    location: "Tokyo, Japan",
+    points: [
+      "Designed prompt-rubrics for evaluating LLMs in science and engineering.",
+      "Worked as both a prompt creator (Writer) and an evaluator (Editor).",
+    ],
+  },
+  {
+    period: "Sep. 2023 – Mar. 2026",
     title:
       "Development and Operation of an Automated Meeting Minutes Delivery System Integrating LLM and NLP",
     institution: "Reazon Holdings Corporation, R&D Division",
@@ -185,9 +206,9 @@ const workHistory = [
 
 const education = [
   {
-    period: "Sep. 2020 – present",
+    period: "Sep. 2020 – Jun. 2026",
     school: "Okinawa Institute of Science and Technology",
-    degree: "Ph.D. in Cognitive Neurorobotics, expected February 2026",
+    degree: "Ph.D. in Computer Science (Cognitive Neurorobotics)",
     location: "Okinawa, Japan",
   },
   {
@@ -214,7 +235,7 @@ const fellowships = [
       "An unrestricted 1 million JPY scholarship awarded to selected Ph.D. students in AI.",
   },
   {
-    period: "Sep. 2020 – present",
+    period: "Sep. 2020 – Jun. 2026",
     title: "OIST Ph.D. Fellowship",
     organization: "Okinawa Institute of Science and Technology",
     description:

@@ -101,6 +101,17 @@ const publications = [
 
 const researchHistory = [
   {
+    period: "2026.4 – present",
+    title: "高度技能ロボットを実現する身体融合学習基盤の創出（CREST）",
+    institution: "Sony Computer Science Laboratories, Humanity Science Project",
+    location: "Tokyo, Japan",
+    advisors: "Project Researcher",
+    points: [
+      "プロジェクトリサーチャーとして、物理的な人-ロボット相互作用実験の立ち上げを担当。",
+      "Enactic社製のオープンソースヒューマノイドロボット「OpenArm」を使用。",
+    ],
+  },
+  {
     period: "2025.1 – 2025.7",
     title:
       "生成・認識・自信推定を単一モデルで行う予測符号化RNNモデル CERNet の提案・実ロボットでの実証",
@@ -115,7 +126,7 @@ const researchHistory = [
     ],
   },
   {
-    period: "2021.9 – present",
+    period: "2021.9 – 2026.6",
     title: "自由エネルギー原理を基にした力覚的な人-ロボット相互作用研究",
     institution: "Okinawa Institute of Science and Technology, Cognitive Neurorobotics Research Unit",
     location: "Okinawa, Japan",
@@ -163,7 +174,17 @@ const researchHistory = [
 
 const workHistory = [
   {
-    period: "2023.9 – present",
+    period: "2026.3 – 2026.4",
+    title: "LLM評価のための理化学系プロンプトデザイン",
+    organization: "Mercor（Bilingual Japanese STEM Expert Writer & Editor）",
+    location: "Tokyo, Japan",
+    points: [
+      "LLMを評価するための理化学系プロンプト（Prompt-Rubric）を設計。",
+      "プロンプトの作成者（Writer）および評価者（Editor）として従事。",
+    ],
+  },
+  {
+    period: "2023.9 – 2026.3",
     title: "大規模生成モデルと自然言語処理モデルを統合した自動議事録送付システムの開発・運用",
     organization: "株式会社レアゾン・ホールディングス, R&D開発本部",
     location: "Tokyo, Japan",
@@ -178,9 +199,9 @@ const workHistory = [
 
 const education = [
   {
-    period: "2020.9 – present",
+    period: "2020.9 – 2026.6",
     school: "Okinawa Institute of Science and Technology",
-    degree: "PhD in Cognitive Neurorobotics, expected February 2026",
+    degree: "PhD in Computer Science (Cognitive Neurorobotics)",
     location: "Okinawa, Japan",
   },
   {
@@ -207,7 +228,7 @@ const fellowships = [
       "AI分野の博士課程学生を対象とした給付型奨学金。使途自由の100万円を給付。",
   },
   {
-    period: "2020.9 – present",
+    period: "2020.9 – 2026.6",
     title: "OIST PhD Fellowship",
     organization: "Okinawa Institute of Science and Technology",
     description:
