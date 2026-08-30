@@ -4,6 +4,38 @@ const publications = [
   {
     authors: (
       <>
+        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
+      </>
+    ),
+    year: "2026",
+    title:
+      "PredVLA: A Sub-Million-Parameter Predictive-Coding Policy for Robot Manipulation",
+    venue: "arXiv preprint (arXiv:2608.26673)",
+    href: "https://arxiv.org/abs/2608.26673",
+    description:
+      "小型ロボット制御器を「観測→行動」の写像として圧縮するのではなく、センサ運動ダイナミクスの予測と予測誤差による潜在状態推論として組むPredVLAを提案。ロボットデータの事前学習なし・約0.68MパラメータでLIBERO短horizon 3スイート平均86.94%（LONG含む4スイート平均75.35%）を達成し、同一のパラメータ予算・同一のfrozen front endを与えたBC-Transformer（19.73%）とBC-LSTM（10.26%）を大きく上回った。",
+    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
+        <strong>Hiroki Sawada</strong> and Jun Tani
+      </>
+    ),
+    year: "2026",
+    title:
+      "Free-Energy-Gated Plasticity for Real-Time Online Motor Learning in Physical Human-Robot Interaction",
+    venue: "arXiv preprint (arXiv:2608.23000)",
+    href: "https://arxiv.org/abs/2608.23000",
+    description:
+      "PV-RNNをシナプス重みの逐次適応まで拡張し、変分自由エネルギーに応じて実効学習率を制御するFree-Energy-Gated Plasticity (FEGP)を提案。事前学習・リプレイ・タスク境界信号なしに実時間の物理的人-ロボット相互作用から3つの周期運動を獲得し、可塑性の平均的な大きさではなく予測ズレに対する時間的配置が既獲得動作の保持を決めることを示した。",
+    tags: ["FEGP", "PV-RNN", "Online Learning", "Torobo"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
         <strong>Hiroki Sawada</strong>, Wataru Ohata, and Jun Tani
       </>
     ),

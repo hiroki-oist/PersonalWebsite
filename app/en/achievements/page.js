@@ -4,6 +4,38 @@ const publications = [
   {
     authors: (
       <>
+        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
+      </>
+    ),
+    year: "2026",
+    title:
+      "PredVLA: A Sub-Million-Parameter Predictive-Coding Policy for Robot Manipulation",
+    venue: "arXiv preprint (arXiv:2608.26673)",
+    href: "https://arxiv.org/abs/2608.26673",
+    description:
+      "Proposed PredVLA, a compact recurrent controller organized around predicting sensorimotor dynamics and inferring its latent state from prediction error, rather than compressing a conventional observation-to-action policy. With no robot-data pretraining and about 0.68M trainable parameters, it reaches 86.94% mean success on the three short-horizon LIBERO suites (75.35% across all four), against 19.73% for BC-Transformer and 10.26% for BC-LSTM under a matched parameter budget and an identical frozen front end.",
+    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
+        <strong>Hiroki Sawada</strong> and Jun Tani
+      </>
+    ),
+    year: "2026",
+    title:
+      "Free-Energy-Gated Plasticity for Real-Time Online Motor Learning in Physical Human-Robot Interaction",
+    venue: "arXiv preprint (arXiv:2608.23000)",
+    href: "https://arxiv.org/abs/2608.23000",
+    description:
+      "Extended PV-RNN to continuously adapt its synaptic weights and proposed Free-Energy-Gated Plasticity (FEGP), which regulates the effective learning rate according to variational free energy. A randomly initialized network acquired three cyclic motor patterns during real-time physical human-robot interaction without pretraining, replay, or task-boundary signals, showing that the timing of plasticity relative to model-environment mismatch, rather than its average magnitude, preserves previously acquired behaviors.",
+    tags: ["FEGP", "PV-RNN", "Online Learning", "Torobo"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
         <strong>Hiroki Sawada</strong>, Wataru Ohata, and Jun Tani
       </>
     ),

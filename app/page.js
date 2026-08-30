@@ -206,6 +206,11 @@ function Header({ switchToEnglish }) {
 function ResearchHighlights() {
   const highlights = [
     {
+      icon: "/assets/home/icon-publications.svg",
+      title: "PredVLA",
+      text: "First-author arXiv preprint",
+    },
+    {
       icon: "/assets/home/icon-award.svg",
       title: "IROS 2024",
       text: "First-author LBR",

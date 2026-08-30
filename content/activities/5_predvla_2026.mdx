@@ -1,0 +1,68 @@
+---
+id: predvla_2026
+title: "arXiv公開：小型ロボット制御器は「観測→行動」の写像として作るべきなのか（PredVLA）"
+date: "2026-08-27"
+summary: "小さなロボット方策を作るには、大きなVLAを圧縮するのが本当に正しいのか。PredVLAはこの問いを、observation-to-actionマッピングの小型化ではなく、センサ運動世界の予測と予測誤差による潜在状態推論という別の計算原理から検証した論文です。ロボットデータの事前学習なし・約0.68Mパラメータで、LIBERO短horizon 3スイート平均86.94%を達成し、同一のパラメータ予算・同一のfrozen front endを与えたBC-Transformer（19.73%）やBC-LSTM（10.26%）を大きく上回りました。"
+thumbnail: ""
+---
+
+**PredVLA**をarXivで公開しました。ソニーCSLの笠原俊一さんとの共著です。
+
+<br />
+
+この論文が立てている問いは「小さいロボット方策を作るには、大きなVLAを圧縮するのが本当に正しいのか」です。
+
+<br />
+
+現在のVision-Language-Action研究は、TransformerやDiffusion Policyを中心としたobservation-to-action mappingを大規模化・事前学習することで高性能化する流れが主流です。軽量化を目指す研究も、基本的にはこの枠組みを保ったままモデルを小さくしたり推論を速くしたりする方向に進んでいます。PredVLAはそこから一歩戻り、小型化の「方法」ではなく、小型コントローラの計算原理そのものを問い直します。
+
+<br />
+
+すなわち、**限られたパラメータしか使えないなら、そもそも現在の観測から行動を直接計算することに容量を使うべきなのか。それとも、センサ運動世界の時間的ダイナミクスを予測することに容量を使い、観測は予測誤差を通して内部状態を推論する方が効率的なのではないか**、という問いです。
+
+<br />
+
+提案するPredVLAは、ロボットデータで学習されるパラメータが約0.68Mしかない階層型recurrent controllerです。言語と画像には凍結したMiniLMとResNet18を特徴抽出器として使いますが、robot-data pretrainingは行いません。最大の特徴は、画像やproprioceptionがrecurrent dynamicsへ直接入力されないことです。ネットワーク自身がvisual featureとproprioceptionを予測し、実際の観測とのズレであるprediction errorを最小化するようにlatent variablesをオンライン更新することで、「いま自分がどの状態にいるか」を推論します。つまり通常の `observation → hidden state → action` ではなく、`predictive dynamics → prediction error → latent-state inference → action` という制御系になっています。future predictionをauxiliary lossとして足した方策とは異なり、predictionそのものがstate estimationの計算原理になっている点がポイントです。
+
+<br />
+
+LIBEROの4スイートで評価すると、PredVLAは短期3スイートで86.94%、LONGを含む4スイートで75.35%の平均成功率を達成します。これに対して、同じfrozen visual/language front end、同じdemonstrations、同じaction representation、ほぼ同一のtrainable parameter budgetを与えたBC-Transformerは19.73%、BC-LSTMは10.26%でした。良いseedを一つ示した結果ではなく、main evaluationでは各スイートについて14個の独立学習seed × 各タスク50 rollouts、つまりスイートあたり7,000エピソードを評価しています。したがって中心的な主張は「0.68Mでもそこそこ動いた」ことではなく、**同じ極小パラメータ領域では、direct observation-to-action policyとpredictive controllerの間に非常に大きな性能差が生じる**ことです。
+
+<br />
+
+この差を単なるアーキテクチャ比較で終わらせないために、PredVLAからBC-RNNへ機構を一段ずつ取り除くmechanism-by-mechanism ladderを作りました。オンラインのerror regressionを止め、training-time latent inferenceを外し、predictive sensorimotor pathwayをdirect observation inputに置き換え、temporal hierarchyを平坦化し、最後にLSTMへ置換することで、独立実装したBC-RNNに徐々に近づけていきます。オンライン推論を止めるだけで約9ポイント、training-time latent inferenceまで除くとさらに約13ポイント低下し、そしてpredictive/error-mediatedな構成をdirect observation policyに置き換える段階で最大の崩壊が起きます。
+
+<br />
+
+ここで見えてきているのは、predictionを補助目的として持つこと自体よりも、**感覚観測をforward policyへ直接注入せず、学習された生成ダイナミクスと予測誤差を介してrecurrent stateを形成するという計算的な組織化**が重要なのではないか、ということです。実際、predictive controllerにdirect visual shortcutを追加すると、性能は回復するどころか低下します。
+
+<br />
+
+もう一つの性質として、PredVLAはオンラインerror regressionを0 iterationにするだけで、同じ学習済みネットワークをそのまま**厳密なopen-loop controller**に変えられます。別のopen-loopモデルを再学習することなく、online sensory correctionそのものの寄与を測れるということです。実際にオンラインERを無効化すると、短期3スイートで6〜12ポイント程度、LONGでは約13ポイント低下し、long-horizonなタスクほどonline correctionへの依存が大きいことが分かりました。一方でopen-loopでも短期タスクでは70%以上動くため、PredVLAが毎ステップの最適化だけで行動を作っているのではなく、大部分は学習済みの内部ダイナミクス自身が生成していることも同時に示されています。
+
+<br />
+
+まとめると、この論文の核心は次の主張です。
+
+<br />
+
+*Compact robot control may benefit more from changing how sensory information is used than from compressing the conventional observation-to-action policy.*
+
+<br />
+
+PredVLAはその具体例として、世界を予測する小さなrecurrent generative modelを学習し、観測を直接action mappingに投入するのではなく予測誤差によって内部状態を推論することで、同程度のパラメータ予算を持つdirect policyを大きく上回れることをLIBERO上で示しました。そしてその優位性が、RNN cell・temporal hierarchy・test-time optimizationのどれか一要素だけでは説明できず、predictive dynamicsとlatent inferenceとhierarchical timescaleが組み合わさった計算構造から生じていることを、mechanism ladderとablationによって分析しています。
+
+<br />
+
+現時点ではシミュレーション評価・単一の身体・スイートごとの学習という制約があり、long-horizonタスクの成功率も課題として残っています。サブミリオンのパラメータ予算を保ったまま、実機展開や外乱への頑健性、より長い時間スケールの行動へ広げていく予定です。
+
+<br />
+
+<a
+  href="https://arxiv.org/abs/2608.26673"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  PredVLA論文はこちら
+</a>

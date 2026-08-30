@@ -1,0 +1,40 @@
+---
+id: fegp_2026
+title: "arXiv preprint: Gating Plasticity by Free Energy for Online Motor Learning (FEGP)"
+date: "2026-08-24"
+summary: "We released a preprint on Free-Energy-Gated Plasticity (FEGP), a method for acquiring and retaining multiple motor patterns during real-time physical human-robot interaction without pretraining, replay, or task-boundary signals. We extend PV-RNN so that it continuously adapts its synaptic weights, and gate the effective learning rate by the variational free energy so that acquiring new behaviors does not overwrite previously acquired ones."
+thumbnail: ""
+---
+
+We released **Free-Energy-Gated Plasticity for Real-Time Online Motor Learning in Physical Human-Robot Interaction** on arXiv. This work is co-authored with Prof. Jun Tani.
+
+<br />
+
+Fully online embodied learning has to do two things at once: acquire new behaviors while the interaction continues, and retain previously learned dynamics without destroying them. If the weights are updated at a constant learning rate forever, the model is dragged toward the most recent observations and earlier behaviors are lost.
+
+<br />
+
+In this work, we extend PV-RNN, a predictive-coding-inspired variational RNN, so that it performs not only inference over latent variables but also **continuous adaptation of its synaptic weights**. On top of that, we propose **Free-Energy-Gated Plasticity (FEGP)**, which regulates the effective learning rate according to a windowed average of the variational free energy. The idea is to open plasticity only when the mismatch between the model and the environment is large — that is, when something currently unknown is happening — and to close the gate in already familiar situations. We also introduce hysteresis with two thresholds to prevent the gate from switching too frequently.
+
+<br />
+
+In the experiments, we used Torobo, a dual-arm humanoid robot, and trained a model predicting the end-effector poses of both arms in real time from random initialization. No pretraining, no replay buffer, and no signal indicating task boundaries were used. Three cyclic movements were demonstrated through kinaesthetic teaching, where a person physically moves the robot's arms, and by the end of the session all three patterns appeared in the autonomous generation of the model.
+
+<br />
+
+We further ran controlled experiments over 10 teaching streams and 5 initializations. FEGP substantially improved both the coverage of the repertoire and the retention of behaviors after they had left the observation window. Crucially, this improvement was reproduced neither by a **constant learning rate fixed at the time average of the gate**, nor by a condition that **replayed the same sequence of gains with its temporal structure destroyed**. In other words, what matters is not the average magnitude or the distribution of plasticity, but **when** plasticity is allocated relative to the mismatch between the model and the environment.
+
+<br />
+
+On the other hand, the broader repertoire comes at a slight cost in the trajectory accuracy of individual cycles. The difference amounts to a few millimeters at the end-effector, which stays within a range that is small compared with the variability of the demonstrations themselves. This study covers three cyclic patterns; extending the approach to larger repertoires and longer interactions remains future work.
+
+<br />
+
+<a
+  href="https://arxiv.org/abs/2608.23000"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  FEGP paper
+</a>

@@ -1,0 +1,68 @@
+---
+id: predvla_2026
+title: "arXiv preprint: Should a Compact Robot Controller Be Organized as Observation-to-Action Mapping at All? (PredVLA)"
+date: "2026-08-27"
+summary: "Is compressing a large VLA really the right way to build a small robot policy? PredVLA examines this question not by shrinking observation-to-action mapping, but from a different computational principle: predicting the sensorimotor world and inferring the latent state through prediction error. With no robot-data pretraining and about 0.68M trainable parameters, it reaches 86.94% mean success across the three short-horizon LIBERO suites, far above BC-Transformer (19.73%) and BC-LSTM (10.26%) given the same parameter budget and the same frozen front end."
+thumbnail: ""
+---
+
+We released **PredVLA** on arXiv. This work is co-authored with Shunichi Kasahara at Sony CSL.
+
+<br />
+
+The question this paper asks is: is compressing a large VLA really the right way to build a small robot policy?
+
+<br />
+
+Current Vision-Language-Action research is dominated by scaling up and pretraining observation-to-action mapping, mostly with Transformers and Diffusion Policies. Work aimed at lightweight models largely keeps that framework intact and pushes toward smaller models or faster inference. PredVLA steps back from there and reconsiders not the *method* of shrinking, but the computational principle of a compact controller itself.
+
+<br />
+
+Concretely: **if only a limited parameter budget is available, should that capacity be spent on computing actions directly from the current observation? Or is it more efficient to spend it on predicting the temporal dynamics of the sensorimotor world, and let observations infer the internal state through prediction error?**
+
+<br />
+
+PredVLA is a hierarchical recurrent controller with only about 0.68M parameters trained on robot data. Language and images are processed by frozen MiniLM and ResNet18 feature extractors, and no robot-data pretraining is performed. The key property is that images and proprioception are never fed directly into the recurrent dynamics. The network itself predicts visual features and proprioception, and infers "where am I now" by updating its latent variables online so as to minimize the prediction error against the actual observations. Instead of the usual `observation → hidden state → action`, the control loop is `predictive dynamics → prediction error → latent-state inference → action`. This differs from a policy that merely adds future prediction as an auxiliary loss: here prediction itself is the computational principle of state estimation.
+
+<br />
+
+Evaluated on the four LIBERO suites, PredVLA reaches 86.94% mean success on the three short-horizon suites and 75.35% across all four including LONG. In comparison, BC-Transformer reaches 19.73% and BC-LSTM 10.26% when given the same frozen visual/language front end, the same demonstrations, the same action representation, and a nearly identical trainable parameter budget. These are not numbers from a single lucky seed: the main evaluation covers 14 independently trained seeds per suite with 50 rollouts per task, i.e. 7,000 episodes per suite. The central claim is therefore not that "0.68M parameters still work reasonably well," but that **in the same extremely small parameter regime, a very large performance gap opens up between a direct observation-to-action policy and a predictive controller**.
+
+<br />
+
+To keep this gap from being just an architecture comparison, we built a mechanism-by-mechanism ladder that removes one mechanism at a time from PredVLA toward BC-RNN: disabling online error regression, removing training-time latent inference, replacing the predictive sensorimotor pathway with direct observation input, flattening the temporal hierarchy, and finally substituting an LSTM, gradually approaching an independently implemented BC-RNN. Disabling online inference alone costs about 9 points; also removing training-time latent inference costs a further ~13 points; and the largest collapse occurs at the step where the predictive, error-mediated organization is replaced by a direct observation policy.
+
+<br />
+
+What emerges is that the important factor may not be having prediction as an auxiliary objective, but the **computational organization in which sensory observations are not injected directly into a forward policy, and the recurrent state is instead formed through learned generative dynamics and prediction error**. Consistently with this, adding a direct visual shortcut to the predictive controller does not recover performance — it degrades it.
+
+<br />
+
+Another property is that simply setting online error regression to 0 iterations turns the very same trained network into an **exact open-loop controller**. This makes it possible to measure the contribution of online sensory correction itself without retraining a separate open-loop model. Disabling online ER costs roughly 6–12 points on the short-horizon suites and about 13 points on LONG, showing that longer-horizon tasks depend more on online correction. At the same time, the open-loop variant still exceeds 70% on short-horizon tasks, which shows that PredVLA does not produce its behavior by per-step optimization alone: much of it is generated by the learned internal dynamics themselves.
+
+<br />
+
+In short, the core claim of the paper is this:
+
+<br />
+
+*Compact robot control may benefit more from changing how sensory information is used than from compressing the conventional observation-to-action policy.*
+
+<br />
+
+As a concrete instance of that claim, PredVLA learns a small recurrent generative model of the world and, rather than feeding observations straight into an action mapping, infers its internal state through prediction error — substantially outperforming direct policies with a comparable parameter budget on LIBERO. The mechanism ladder and the ablations then show that this advantage cannot be explained by any single ingredient such as the RNN cell, the temporal hierarchy, or test-time optimization alone, but arises from a computational structure combining predictive dynamics, latent inference, and hierarchical timescales.
+
+<br />
+
+For now the evaluation is limited to simulation, a single embodiment, and per-suite training, and the success rate on long-horizon tasks remains a challenge. We plan to extend the approach to real-robot deployment, robustness against perturbations, and behaviors on longer timescales, while keeping the sub-million parameter budget.
+
+<br />
+
+<a
+  href="https://arxiv.org/abs/2608.26673"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  PredVLA paper
+</a>
