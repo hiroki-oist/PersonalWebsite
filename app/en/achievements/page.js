@@ -9,7 +9,7 @@ const publications = [
     ),
     year: "2026",
     title:
-      "PredVLA: A Sub-Million-Parameter Predictive-Coding Policy for Robot Manipulation",
+      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
     venue: "arXiv preprint (arXiv:2608.26673)",
     href: "https://arxiv.org/abs/2608.26673",
     description:

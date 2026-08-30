@@ -211,11 +211,6 @@ function ResearchHighlights() {
       text: "First-author arXiv preprint",
     },
     {
-      icon: "/assets/home/icon-award.svg",
-      title: "IROS 2024",
-      text: "First-author LBR",
-    },
-    {
       icon: "/assets/home/icon-calendar.svg",
       title: "ICRA 2026",
       text: "First-author paper",
