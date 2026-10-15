@@ -124,7 +124,7 @@ export default function Home({ lang = "ja", activities = [] }) {
       </section>
 
       <SectionHeading>{t.news}</SectionHeading>
-      <ul className="space-y-2 text-[14px]">
+      <ul className="max-h-[320px] space-y-2 overflow-y-auto pr-2 text-[14px]">
         {activities.map((a) => (
           <li key={a.id} className="flex flex-col sm:flex-row sm:gap-6">
             <span className="shrink-0 text-[13px] text-[#999] sm:w-24">{a.date?.replaceAll("-", ".")}</span>

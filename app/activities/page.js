@@ -26,7 +26,8 @@ function loadActivities() {
         summary: data.summary,
         thumbnail: data.thumbnail,
       };
-    });
+    })
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
 export default function Activities() {
