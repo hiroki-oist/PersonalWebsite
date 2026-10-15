@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Achievements from "@/components/simple/Achievements";
 
 const publications = [
   {
@@ -16,6 +16,37 @@ const publications = [
       "小型ロボット制御器を「観測→行動」の写像として圧縮するのではなく、センサ運動ダイナミクスの予測と予測誤差による潜在状態推論として組むPredVLAを提案。ロボットデータの事前学習なし・約0.68MパラメータでLIBERO短horizon 3スイート平均86.94%（LONG含む4スイート平均75.35%）を達成し、同一のパラメータ予算・同一のfrozen front endを与えたBC-Transformer（19.73%）とBC-LSTM（10.26%）を大きく上回った。",
     tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
     featured: true,
+  },
+  {
+    authors: (
+      <>
+        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
+      </>
+    ),
+    year: "2026",
+    title:
+      "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies",
+    venue: "arXiv preprint (arXiv:2609.15940)",
+    href: "https://arxiv.org/abs/2609.15940",
+    description:
+      "同一の初期状態を単軸条件と同時条件でペアにして評価する6軸ベンチマーク LIBERO-CTRL を提案。集計成功率では区別できない emergent failures（単軸は全て成功するが同時条件で失敗）と compensated successes（単軸で失敗があるが同時条件で成功）という逆向きの2つの遷移が相殺するため、集計値が単軸評価と整合して見える場合でも最大29.0%の初期状態で結果が入れ替わり、最も影響の大きい条件では34.5%に達することを6方策・3強度で示した。",
+    tags: ["LIBERO-CTRL", "VLA", "Robustness", "Benchmark"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
+        Henrique Oyama, <strong>Hiroki Sawada</strong>, and Jun Tani
+      </>
+    ),
+    year: "2026",
+    title:
+      "Predictive-Coding-Based Autonomous Regulation of Internally Generated and Externally Coupled Processing in Human-Robot Interaction",
+    venue: "arXiv preprint (arXiv:2609.06888)",
+    href: "https://arxiv.org/abs/2609.06888",
+    description:
+      "PV-RNNのメタプライアを、直近の相互作用履歴に蓄積された再構成誤差に応じてオンラインで切り替える機構を提案。内部生成された予測と外界の感覚証拠への依存度をロボット自身が調整する。3種類の物理的人-ロボット相互作用タスクにおいて、再構成履歴に駆動されたレジーム選択が将来方向の予測誤差とロボット側の物理的衝突を低減することを示した。",
+    tags: ["PV-RNN", "Meta-Prior", "Predictive Coding", "HRI"],
   },
   {
     authors: (
@@ -75,8 +106,8 @@ const publications = [
     year: "2026",
     title:
       "CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation",
-    venue: "Proceedings in IEEE ICRA 2026 (accepted)",
-    href: "https://arxiv.org/abs/2512.07041",
+    venue: "2026 IEEE International Conference on Robotics and Automation (ICRA), pp. 21744-21751",
+    href: "https://doi.org/10.1109/ICRA57385.2026.11695989",
     description:
       "予測符号化とクラスEmbeddingを多層RNNに統合し、ロボット運動の生成、認識、自信推定を単一モデルで扱うCERNetを提案。Reachyを用いた実ロボット実験で検証した。",
     tags: ["CERNet", "ICRA 2026", "Predictive Coding", "Reachy"],
@@ -270,6 +301,12 @@ const fellowships = [
 
 const academicActivities = [
   {
+    period: "2026.10",
+    title: "Reviewer, IEEE ICRA 2027 Conference Papers",
+    description:
+      "IEEE International Conference on Robotics and Automation 2027 における本会議Proceedings論文の査読。",
+  },
+  {
     period: "2025.5",
     title: "Reviewer, IEEE ICDL 2025 Contributed Papers",
     description:
@@ -277,395 +314,16 @@ const academicActivities = [
   },
 ];
 
-export default function Achievements() {
+export default function AchievementsPage() {
   return (
-    <main className="min-h-screen bg-[#FBF6EF] text-[#2E2A27]">
-      <Header />
-
-      <section className="relative overflow-hidden border-b border-[#E9D9C6]">
-        <img
-          src="/assets/home/hero-orbit-lines.svg"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-40"
-        />
-
-        <div className="pointer-events-none absolute -right-40 top-10 h-[520px] w-[520px] rounded-full bg-[#D99455]/20 blur-3xl" />
-        <div className="pointer-events-none absolute -left-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#B86524]/10 blur-3xl" />
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-14">
-          <div className="max-w-4xl">
-            <p className="mb-5 text-sm font-semibold tracking-[0.22em] text-[#B86524]">
-              RESEARCH & PROFILE
-            </p>
-
-            <h1 className="font-serif text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#2E2A27] md:text-7xl">
-              Publications,
-              <br />
-              Research History
-              <br />
-              <span className="text-[#B86524]">& Profile</span>
-            </h1>
-
-            <p className="mt-8 max-w-3xl text-base leading-8 text-[#4C4540] md:text-lg">
-              自由エネルギー原理、予測符号化、再帰型ニューラルネットワーク、
-              身体性AIを軸に、人間とロボットの相互適応的な運動生成・認識・推論を研究しています。
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#publications"
-                className="inline-flex items-center gap-3 rounded-2xl bg-[#B86524] px-6 py-4 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(184,101,36,0.28)] transition hover:-translate-y-0.5 hover:bg-[#A8581F]"
-              >
-                View Publications
-                <span aria-hidden="true">→</span>
-              </a>
-
-              <a
-                href="/cv/cv_jp.pdf"
-                className="inline-flex items-center gap-3 rounded-2xl border border-[#D8B98E] bg-white/75 px-6 py-4 text-sm font-semibold text-[#2E2A27] shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-white"
-              >
-                Download CV
-                <span aria-hidden="true">↓</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <QuickStats />
-
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-16 md:px-10 lg:grid-cols-[260px_1fr] lg:px-14">
-        <aside className="hidden lg:block">
-          <div className="sticky top-28 rounded-[28px] border border-[#E7D6C1] bg-white/70 p-5 shadow-[0_10px_34px_rgba(46,42,39,0.06)] backdrop-blur">
-            <p className="mb-4 text-xs font-bold tracking-[0.22em] text-[#B86524]">
-              CONTENTS
-            </p>
-            <nav className="space-y-2 text-sm font-medium text-[#5D534C]">
-              <SideLink href="#publications">Publications</SideLink>
-              <SideLink href="#research">Research History</SideLink>
-              <SideLink href="#work">Work Experience</SideLink>
-              <SideLink href="#education">Education</SideLink>
-              <SideLink href="#fellowships">Fellowships</SideLink>
-              <SideLink href="#academic">Academic Activities</SideLink>
-            </nav>
-          </div>
-        </aside>
-
-        <div className="space-y-20">
-          <Section id="publications" label="PUBLICATIONS" title="Selected Publications">
-            <div className="space-y-5">
-              {publications.map((paper, index) => (
-                <PublicationCard key={paper.title} paper={paper} index={index} />
-              ))}
-            </div>
-          </Section>
-
-          <Section id="research" label="RESEARCH HISTORY" title="Research Experience">
-            <Timeline items={researchHistory} />
-          </Section>
-
-          <Section id="work" label="WORK EXPERIENCE" title="Engineering Experience">
-            <Timeline
-              items={workHistory.map((item) => ({
-                period: item.period,
-                title: item.title,
-                institution: item.organization,
-                location: item.location,
-                points: item.points,
-              }))}
-            />
-          </Section>
-
-          <Section id="education" label="EDUCATION" title="Education">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              {education.map((item) => (
-                <SimpleCard key={item.school}>
-                  <p className="text-sm font-semibold text-[#B86524]">
-                    {item.period}
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl font-semibold text-[#2E2A27]">
-                    {item.school}
-                  </h3>
-                  <p className="mt-3 text-base leading-7 text-[#4C4540]">
-                    {item.degree}
-                  </p>
-                  <p className="mt-2 text-sm text-[#8A7A6E]">{item.location}</p>
-                </SimpleCard>
-              ))}
-            </div>
-          </Section>
-
-          <Section id="fellowships" label="FELLOWSHIPS" title="Scholarships & Fellowships">
-            <div className="grid grid-cols-1 gap-5">
-              {fellowships.map((item) => (
-                <SimpleCard key={item.title}>
-                  <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                    <div>
-                      <p className="text-sm font-semibold text-[#B86524]">
-                        {item.period}
-                      </p>
-                      <h3 className="mt-3 font-serif text-2xl font-semibold text-[#2E2A27]">
-                        {item.title}
-                      </h3>
-                      <p className="mt-1 text-sm font-medium text-[#8A7A6E]">
-                        {item.organization}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-base leading-7 text-[#4C4540]">
-                    {item.description}
-                  </p>
-                </SimpleCard>
-              ))}
-            </div>
-          </Section>
-
-          <Section id="academic" label="ACADEMIC ACTIVITIES" title="Academic Activities">
-            <div className="space-y-5">
-              {academicActivities.map((item) => (
-                <SimpleCard key={item.title}>
-                  <p className="text-sm font-semibold text-[#B86524]">
-                    {item.period}
-                  </p>
-                  <h3 className="mt-3 font-serif text-2xl font-semibold text-[#2E2A27]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-base leading-7 text-[#4C4540]">
-                    {item.description}
-                  </p>
-                </SimpleCard>
-              ))}
-            </div>
-          </Section>
-        </div>
-      </div>
-
-      <div className="mt-10">
-        <img
-          src="/assets/home/soft-wave-footer.svg"
-          alt=""
-          aria-hidden="true"
-          className="w-full"
-        />
-      </div>
-    </main>
-  );
-}
-
-function Header() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-[#E9D9C6] bg-[#FBF6EF]/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-14">
-        <a href="/" className="flex items-center gap-3">
-          <img
-            src="/assets/home/logo-hs.svg"
-            alt="Hiroki Sawada"
-            className="h-11 w-auto"
-          />
-        </a>
-
-        <nav className="hidden items-center gap-8 text-sm font-medium text-[#3C3631] md:flex">
-          <a className="transition hover:text-[#B86524]" href="/">
-            Top
-          </a>
-          <a className="text-[#B86524]" href="/achievements">
-            Research & Profile
-          </a>
-          <a className="transition hover:text-[#B86524]" href="/skills">
-            Skills
-          </a>
-          <a className="transition hover:text-[#B86524]" href="/activities">
-            Activities
-          </a>
-          <a className="transition hover:text-[#B86524]" href="/contact">
-            Contact
-          </a>
-          <a
-            href="/en/achievements"
-            className="rounded-full border border-[#D8B98E] px-3 py-1 text-xs text-[#8D542B] transition hover:bg-white"
-          >
-            EN
-          </a>
-        </nav>
-      </div>
-    </header>
-  );
-}
-
-function QuickStats() {
-  const stats = [
-    {
-      value: "ICRA 2026",
-      label: "First-author accepted paper",
-    },
-    {
-      value: "IEEE T-SMC",
-      label: "First-author journal paper",
-    },
-    {
-      value: "IROS 2024",
-      label: "First-author LBR",
-    },
-    {
-      value: "FEP / HRI",
-      label: "Core research area",
-    },
-  ];
-
-  return (
-    <section className="relative z-10 border-y border-[#E9D9C6] bg-[#FFFDF9]/80 px-6 py-10 backdrop-blur md:px-10 lg:px-14">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {stats.map((item) => (
-          <div
-            key={item.value}
-            className="rounded-3xl border border-[#E7D6C1] bg-white/80 p-5 shadow-[0_10px_34px_rgba(46,42,39,0.06)]"
-          >
-            <p className="font-serif text-2xl font-semibold text-[#2E2A27]">
-              {item.value}
-            </p>
-            <p className="mt-2 text-sm leading-5 text-[#6E6259]">
-              {item.label}
-            </p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function Section({ id, label, title, children }) {
-  return (
-    <section id={id} className="scroll-mt-28">
-      <p className="mb-4 text-xs font-bold tracking-[0.22em] text-[#B86524]">
-        {label}
-      </p>
-      <h2 className="mb-8 font-serif text-4xl font-semibold tracking-[-0.03em] text-[#2E2A27] md:text-5xl">
-        {title}
-      </h2>
-      {children}
-    </section>
-  );
-}
-
-function SideLink({ href, children }) {
-  return (
-    <a
-      href={href}
-      className="block rounded-2xl px-4 py-3 transition hover:bg-[#FBF6EF] hover:text-[#B86524]"
-    >
-      {children}
-    </a>
-  );
-}
-
-function PublicationCard({ paper, index }) {
-  return (
-    <article
-      className={`rounded-[28px] border p-6 shadow-[0_10px_34px_rgba(46,42,39,0.06)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_60px_rgba(46,42,39,0.1)] ${
-        paper.featured
-          ? "border-[#D8B98E] bg-white/90"
-          : "border-[#E7D6C1] bg-white/75"
-      }`}
-    >
-      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-        <div className="min-w-0">
-          <p className="text-sm font-semibold text-[#B86524]">
-            [{index + 1}] {paper.year}
-          </p>
-
-          <h3 className="mt-3 font-serif text-2xl font-semibold leading-tight text-[#2E2A27]">
-            <Link
-              href={paper.href}
-              target={paper.href.startsWith("http") ? "_blank" : undefined}
-              rel={paper.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="transition hover:text-[#B86524]"
-            >
-              {paper.title}
-            </Link>
-          </h3>
-
-          <p className="mt-3 text-sm leading-6 text-[#5D534C]">
-            {paper.authors}
-          </p>
-
-          <p className="mt-2 text-sm font-medium leading-6 text-[#8A7A6E]">
-            {paper.venue}
-          </p>
-        </div>
-
-        {paper.featured && (
-          <span className="w-fit shrink-0 rounded-full border border-[#D8B98E] bg-[#FBF6EF] px-3 py-1 text-xs font-semibold text-[#8D542B]">
-            Featured
-          </span>
-        )}
-      </div>
-
-      <p className="mt-5 text-base leading-7 text-[#4C4540]">
-        {paper.description}
-      </p>
-
-      <div className="mt-5 flex flex-wrap gap-2">
-        {paper.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-[#FBF6EF] px-3 py-1 text-xs font-semibold text-[#8D542B]"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    </article>
-  );
-}
-
-function Timeline({ items }) {
-  return (
-    <div className="space-y-5">
-      {items.map((item) => (
-        <article
-          key={`${item.period}-${item.title}`}
-          className="grid grid-cols-1 gap-5 rounded-[28px] border border-[#E7D6C1] bg-white/80 p-6 shadow-[0_10px_34px_rgba(46,42,39,0.06)] md:grid-cols-[180px_1fr]"
-        >
-          <div>
-            <p className="text-sm font-semibold leading-6 text-[#B86524]">
-              {item.period}
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-serif text-2xl font-semibold leading-tight text-[#2E2A27]">
-              {item.title}
-            </h3>
-
-            <p className="mt-3 text-sm font-medium leading-6 text-[#5D534C]">
-              {item.institution}
-            </p>
-
-            <div className="mt-1 space-y-1 text-sm leading-6 text-[#8A7A6E]">
-              {item.advisors && <p>{item.advisors}</p>}
-              {item.location && <p>{item.location}</p>}
-            </div>
-
-            <ul className="mt-5 space-y-2 text-base leading-7 text-[#4C4540]">
-              {item.points.map((point) => (
-                <li key={point} className="flex gap-3">
-                  <span className="mt-[0.75em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#B86524]" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </article>
-      ))}
-    </div>
-  );
-}
-
-function SimpleCard({ children }) {
-  return (
-    <article className="rounded-[28px] border border-[#E7D6C1] bg-white/80 p-6 shadow-[0_10px_34px_rgba(46,42,39,0.06)]">
-      {children}
-    </article>
+    <Achievements
+      lang="ja"
+      publications={publications}
+      researchHistory={researchHistory}
+      workHistory={workHistory}
+      education={education}
+      fellowships={fellowships}
+      academicActivities={academicActivities}
+    />
   );
 }

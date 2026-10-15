@@ -1,0 +1,40 @@
+---
+id: libero_ctrl_2026
+title: "arXiv preprint: Can Compound Robustness Be Inferred from Single-Axis Evaluations? (LIBERO-CTRL)"
+date: "2026-09-14"
+summary: "Vision-language-action policies are usually evaluated one perturbation at a time, yet real deployment involves several shifts at once. We introduce LIBERO-CTRL, a six-axis benchmark that pairs each initial state across single-axis conditions and a matched simultaneous condition, exposing two opposing outcome changes that aggregate success rates cannot distinguish: emergent failures and compensated successes. Because they cancel, as many as 29.0% of matched initial states change outcome even when the aggregate looks consistent with single-axis measurements."
+thumbnail: ""
+---
+
+We released **Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies** on arXiv. This work is co-authored with Shunichi Kasahara at Sony CSL.
+
+<br />
+
+Vision-language-action (VLA) policies are typically evaluated one perturbation at a time, which gives a useful diagnosis of their sensitivity to individual distribution shifts. Real-world deployment, however, may involve several shifts simultaneously, and it remains unclear how these individual robustness measurements compose. The question this paper asks is simple: **can compound robustness be inferred from single-axis evaluations?**
+
+<br />
+
+To study this, we introduce **LIBERO-CTRL**, a six-axis benchmark. Its key property is that each initial state is **paired** across the single-axis conditions and a matched simultaneous condition. This design reveals two opposing outcome changes that aggregate success rates cannot distinguish.
+
+<br />
+
+The first is **emergent failures**, where all single-axis rollouts succeed but the simultaneous rollout fails. The second is **compensated successes**, where at least one single-axis rollout fails but the simultaneous rollout succeeds. Because one transition decreases compound success while the other increases it, they can cancel — making aggregate compound performance **appear consistent with single-axis measurements even when individual outcomes differ substantially**.
+
+<br />
+
+This cancellation is far from negligible. Even when the difference between the two transition rates is not statistically distinguishable from zero, as many as 29.0% of matched initial states still change outcome. Across six policies and three severity levels, such outcome changes reach 34.5% in the most affected condition. The relative prevalence of the two transitions varies across policies and severities, while the transition rates remain similar under independent re-evaluation of stochastic policies — so this is not merely run-to-run noise.
+
+<br />
+
+Compound robustness therefore cannot be characterized from aggregate single-axis success rates alone. **Matched per-instance evaluation** is needed to reveal how joint perturbations alter behavior.
+
+<br />
+
+<a
+  href="https://arxiv.org/abs/2609.15940"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 hover:text-blue-800 underline"
+>
+  LIBERO-CTRL paper
+</a>
