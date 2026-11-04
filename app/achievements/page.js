@@ -8,6 +8,7 @@ const publications = [
       </>
     ),
     year: "2026",
+    firstAuthor: true,
     title:
       "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
     venue: "arXiv preprint (arXiv:2608.26673)",
@@ -24,6 +25,7 @@ const publications = [
       </>
     ),
     year: "2026",
+    firstAuthor: true,
     title:
       "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies",
     venue: "arXiv preprint (arXiv:2609.15940)",
@@ -55,6 +57,7 @@ const publications = [
       </>
     ),
     year: "2026",
+    firstAuthor: true,
     title:
       "Free-Energy-Gated Plasticity for Real-Time Online Motor Learning in Physical Human-Robot Interaction",
     venue: "arXiv preprint (arXiv:2608.23000)",
@@ -71,6 +74,7 @@ const publications = [
       </>
     ),
     year: "2024",
+    firstAuthor: true,
     title:
       "Human-Robot Kinaesthetic Interaction Based on The Free Energy Principle",
     venue: "IEEE Transactions on Systems, Man and Cybernetics: Systems",
@@ -87,6 +91,7 @@ const publications = [
       </>
     ),
     year: "2024",
+    firstAuthor: true,
     title:
       "Incremental Learning in Physical Human-Robot Interaction Using Predictive-Coding inspired Variational RNNs",
     venue:
@@ -104,6 +109,7 @@ const publications = [
       </>
     ),
     year: "2026",
+    firstAuthor: true,
     title:
       "CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation",
     venue: "2026 IEEE International Conference on Robotics and Automation (ICRA), pp. 21744-21751",
@@ -314,6 +320,18 @@ const academicActivities = [
   },
 ];
 
+const projects = [
+  {
+    period: "2026.10",
+    title: "魔法の塔 復刻版（iOSアプリ）",
+    href: "https://apps.apple.com/jp/app/%E9%AD%94%E6%B3%95%E3%81%AE%E5%A1%94-%E5%BE%A9%E5%88%BB%E7%89%88/id6815624226",
+    linkLabel: "App Store",
+    description:
+      "1995年にN.W氏がPC-9800シリーズ向けに発表したローグライクダンジョンRPG「魔法の塔」を、原作者の許諾を得てiPhone向けにリメイク。全50階の盤面・敵の数値・イベント順序を原典どおりに再現し、企画・UI設計・開発から公開・運営まで一人で手がけ、App Storeで公開。C# / Unityで開発。",
+    tags: ["C#", "Unity", "iOS"],
+  },
+];
+
 export default function AchievementsPage() {
   return (
     <Achievements
@@ -324,6 +342,7 @@ export default function AchievementsPage() {
       education={education}
       fellowships={fellowships}
       academicActivities={academicActivities}
+      projects={projects}
     />
   );
 }

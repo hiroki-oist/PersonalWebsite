@@ -1,0 +1,111 @@
+@page {
+  size: A4;
+  margin: 18mm 17mm 18mm 17mm;
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-size: 8.5pt;
+    color: #888;
+  }
+}
+
+:root {
+  --accent: #1f4f8a;
+  --rule: #1f4f8a;
+  --text: #1a1a1a;
+  --muted: #777;
+  --period-col: 32mm;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-size: 9.6pt;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.ja {
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+sub { font-size: 0.7em; line-height: 0; }
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 6mm;
+}
+header h1 {
+  margin: 0;
+  font-size: 21pt;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+header .contact {
+  text-align: right;
+  font-size: 8.4pt;
+  line-height: 1.55;
+  color: #555;
+}
+header .contact a { color: #1a55b5; }
+
+/* Sections */
+section { margin-top: 5mm; }
+h2 {
+  margin: 0 0 3mm;
+  padding-bottom: 1mm;
+  border-bottom: 1.6pt solid var(--rule);
+  font-size: 12.5pt;
+  font-weight: 400;
+  color: var(--accent);
+  break-after: avoid;
+}
+
+/* Entries */
+.entry {
+  display: grid;
+  grid-template-columns: var(--period-col) 1fr;
+  column-gap: 4mm;
+  margin-bottom: 3.2mm;
+  break-inside: avoid;
+}
+.entry.long { break-inside: auto; }
+.period { color: var(--muted); font-size: 8.8pt; padding-top: 0.4mm; }
+.period div { white-space: nowrap; }
+.entry .title { font-weight: 700; }
+.entry .meta { color: var(--muted); font-size: 8.6pt; }
+.entry .project { font-weight: 700; margin-top: 0.8mm; break-after: avoid; }
+.entry ul { margin: 0.8mm 0 0; padding-left: 4.5mm; }
+.entry li { margin: 0.4mm 0; break-inside: avoid; }
+.entry li::marker { color: #999; }
+
+/* Rows (languages) */
+.row {
+  display: grid;
+  grid-template-columns: var(--period-col) 1fr;
+  column-gap: 4mm;
+  margin-bottom: 1.2mm;
+}
+.row .label { color: var(--muted); }
+
+/* Publications */
+ol.pubs { list-style: none; margin: 0; padding: 0; }
+ol.pubs li {
+  display: grid;
+  grid-template-columns: 7mm 1fr;
+  margin-bottom: 1.8mm;
+  font-size: 9pt;
+  line-height: 1.45;
+  break-inside: avoid;
+}
+ol.pubs .num { color: var(--muted); }
+ol.pubs .me { font-weight: 700; text-decoration: underline; text-underline-offset: 1.5pt; }
+ol.pubs .venue { font-style: italic; }

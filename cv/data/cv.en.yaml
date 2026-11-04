@@ -1,0 +1,188 @@
+# English CV — same schema as cv.ja.yaml (see comments there)
+
+lang: en
+name: Hiroki SAWADA
+contact:
+  - label: Phone
+    value: (+81)-80-6787-0693
+  - label: Private Email
+    value: hiroki.sawada.research@gmail.com
+    href: mailto:hiroki.sawada.research@gmail.com
+  - label: Official Email
+    value: hiroki.sawada@csl.sony.co.jp
+    href: mailto:hiroki.sawada@csl.sony.co.jp
+  - label: Personal Page
+    value: https://www.hiroki-sawada.com
+    href: https://www.hiroki-sawada.com
+
+sections:
+  - title: Education
+    type: entries
+    items:
+      - period: 2016.4 – 2020.3
+        title: Keio University
+        lines: [BA in Applied Physics and Physico-Informatics]
+        meta: Kanagawa, Japan
+      - period: 2020.9 – 2026.6
+        title: Okinawa Institute of Science and Technology Graduate University
+        lines: [Ph.D. in Computer Science – Cognitive Neuro-robotics Research Unit]
+        meta: Okinawa, Japan
+
+  - title: Research Experience
+    type: entries
+    items:
+      - period: 2026.4 – present
+        title: Sony Computer Science Laboratory, Humanity Science Project
+        lines: [Project Researcher]
+        meta: Tokyo, Japan
+        project: Body Integration Learning Framework for Highly Skilled Robots
+        bullets:
+          - Leading the setup of physical human-robot interaction experiments using the open-source humanoid robot “OpenArm” (Enactic).
+          - Proposed PredVLA, a compact recurrent controller organized around predicting sensorimotor dynamics and inferring its latent state from prediction error, rather than compressing a conventional observation-to-action policy {{cite:predvla}}.
+          - Proposed LIBERO-CTRL, a six-axis benchmark that pairs single-axis and compound perturbations from identical initial states, revealing compound-robustness failures of VLA policies that aggregate success rates hide {{cite:liberoctrl}}.
+
+      - period: 2025.1 – 2025.7
+        title: Équipes Traitement de l’Information et Systèmes Lab, CY Cergy Paris University
+        lines: ["Prof. Alexandre Pitti, Prof. Mathias Quoy"]
+        meta: Cergy, France
+        project: Investigation of Robust Predictive-Coding inspired Recurrent Neural Network in Real Robot Tasks
+        bullets:
+          - Proposed CERNet, a hierarchical predictive-coding RNN with class embedding, enabling unified real-time motion generation, recognition, and meta-inference of confidence.
+          - Demonstrated stable reproduction of 26 handwritten alphabet trajectories and confidence estimation using the Reachy humanoid robot (Pollen Robotics) in both simulation and real-world settings.
+          - Published in <i>Proceedings of the IEEE International Conference on Robotics and Automation (ICRA), 2026</i> {{cite:cernet}}.
+
+      - period: 2021.9 – 2026.6
+        title: Cognitive Neuro-robotics Research Unit, Okinawa Institute of Science and Technology Graduate University
+        lines: [Prof. Jun Tani]
+        meta: Okinawa, Japan
+        project: Human-Robot Kinaesthetic Interaction Based on the Free Energy Principle
+        bullets:
+          - Investigated human-robot kinaesthetic interaction using a predictive coding-inspired variational RNN, guided by the Free Energy Principle, to model bidirectional sensorimotor dynamics between humans and a humanoid robot.
+          - Through mutually adaptive physical behaviors through active inference, conducted research on revealing the relationship between kinaesthetic perception and the internal state of the employed variational RNN {{cite:tsmc}}.
+          - Studied the emergence of novel behaviours through incremental learning with variational RNNs {{cite:iros}}.
+          - Proposed a framework where a network can continuously learn new movements through human-robot interaction by gating the learning rate based on the free energy {{cite:fegp}}.
+          - Co-developed a mechanism that switches PV-RNN meta-priors online according to accumulated reconstruction error, letting the robot regulate its reliance on internally generated predictions versus external sensory evidence {{cite:metaprior}}.
+
+      - period: [2019.7 – 2020.1, 2021.1 – 2021.4]
+        title: Quantum Materials Science Unit, Okinawa Institute of Science and Technology Graduate University
+        lines: [Prof. Yoshinori Okada]
+        meta: Okinawa, Japan
+        project: Evaluation of magnetic properties in van der Waals compounds
+        bullets:
+          - Evaluated the magnetic properties of van der Waals compounds CeTe<sub>3</sub> and CeTe<sub>2</sub>Se (collaborated with Dr. Imai and Dr. Fujisawa). Results published as a full journal paper {{cite:jpsj}}.
+
+      - period: 2019.4 – 2020.3
+        title: Matoba & Kamihara Lab, Keio University
+        lines: ["Prof. Masanori Matoba, Prof. Yoichi Kamihara"]
+        meta: Kanagawa, Japan
+        project: Synthesis of layered oxysulfide to optimize thermoelectric properties
+        bullets:
+          - Synthesised polycrystalline LaCuS<sub>0.5</sub>Se<sub>0.5</sub>O, which is expected to have high thermoelectric performance, for the first time.
+          - Evaluated the effect of copper deficiency in the polycrystalline sample on its thermoelectric properties. Results published in full journal papers {{cite:kjmr,mstj}}.
+
+  - title: Working Experience
+    type: entries
+    items:
+      - period: 2026.3 – 2026.4
+        title: Mercor
+        lines: [Bilingual Japanese STEM Expert Writer & Editor]
+        meta: Tokyo, Japan
+        project: Designing scientific prompts and evaluation frameworks for AI systems
+        bullets:
+          - Designed Prompt-Rubrics for evaluating LLMs in the fields of science and engineering.
+          - Worked as both a prompt creator (Writer) and an evaluator (Editor).
+
+      - period: 2023.9 – 2026.3
+        title: Reazon Holdings, Inc.
+        lines: [R&D Engineer]
+        meta: Tokyo, Japan
+        project: Development of Automatic Minutes Sender Bot Using LLM and NLP
+        bullets:
+          - Full-time software engineer (4 days/week) with permanent employment status.
+          - Lead engineer for an automated meeting-minutes distribution system that integrates LLMs and NLP; authored over 95% of the code. The system is now running in production within the company.
+          - Built a scalable backend leveraging AWS EC2, S3, SageMaker Asynchronous Inference, Lambda, and other services to enable asynchronous inference.
+          - Designed and developed a RAG-based GPT agent capable of answering complex queries regarding internal company policies and regulations, improving internal knowledge accessibility and employee self-service efficiency.
+
+  - title: Publications and Presentations (arXiv preprint, under review)
+    type: publications
+    group: preprint
+
+  - title: Publications and Presentations (peer-reviewed)
+    type: publications
+    group: peer
+
+  - title: Personal Projects
+    type: entries
+    items:
+      - period: 2026.10
+        title: Magic Tower Revival (魔法の塔 復刻版) — iOS app, available on the App Store
+        lines: ["Personal Project | C#, Unity, iOS | <a href=\"https://apps.apple.com/jp/app/%E9%AD%94%E6%B3%95%E3%81%AE%E5%A1%94-%E5%BE%A9%E5%88%BB%E7%89%88/id6815624226\">App Store</a>"]
+        bullets:
+          - Remade “Magic Tower,” a 1995 roguelike dungeon RPG released by N.W for the PC-9800 series, for iPhone with permission from the original author.
+          - Faithfully reproduced the original 50-floor layouts, enemy stats, and event sequences, with a UI redesigned for modern smartphones. Built with C# and Unity.
+          - Solely responsible for every stage, from planning, UI design, and development to App Store release and operation (free to play with one-time in-app purchases).
+      - period: 2025.3 – present
+        title: LLM-based Mobile Game App (in development)
+        lines: ["Personal Project | Swift, Python, OpenAI API"]
+        bullets:
+          - Designing and developing an iOS game app where users ask questions to guess an answer the AI has thought of.
+          - Integrated OpenAI GPT API and AWS Lambda for real-time inference and data handling.
+          - Applied prompt engineering techniques to constrain and guide model responses across different genres (e.g., animals, brands, countries).
+          - Leveraged Retrieval-Augmented Generation (RAG) to reduce API call cost while maintaining consistency and relevance.
+          - Built entirely using Swift and Xcode as a native iOS app. Demo available upon request.
+
+  - title: Awards and Honours
+    type: entries
+    items:
+      - period: 2020.9 – 2026.6
+        title: Fully Funded Ph.D.
+        meta: Okinawa Institute of Science and Technology Graduate University, Okinawa, Japan
+        bullets:
+          - Selected for a fully funded Ph.D. program.
+      - period: 2021.4 – 2022.3
+        title: JEES Softbank AI Researcher Fellowship
+        meta: Softbank, Japan
+        bullets:
+          - Scholarship of 1,000,000 yen without usage limitations.
+          - Granted to 100 Ph.D. students in the field of AI.
+      - period: 2025.1 – 2025.7
+        title: Bourses France Excellence 2025
+        meta: French Government, France
+        bullets:
+          - Scholarship from the French government to Japanese PhD students.
+          - Covers full tuition and a monthly stipend of €1709 for 6 months.
+      - period: 2025.9
+        title: "TOEIC Listening & Reading test: score 975 / 990"
+
+  - title: Language
+    type: rows
+    items:
+      - label: English
+        value: Near native-level fluency <i>(Lived 13 years abroad in an international environment; PhD program in English)</i>
+      - label: Japanese
+        value: Native
+      - label: French
+        value: Conversational proficiency (CEFR A2 level)
+
+  - title: Activities
+    type: entries
+    items:
+      - period: 2022.2 – 2023.2
+        title: Diversity Officer, OIST Student Council
+        bullets:
+          - Promoted interaction among students from diverse cultural backgrounds within OIST.
+          - Organized a campus symposium “What is discrimination?”.
+      - period: 2023.2 – 2024.2
+        title: Culture and External Relations Representative, OIST Student Council
+        bullets:
+          - Strengthened relationships between OIST and the local community.
+          - Co-hosted two sake introduction events (≈50 participants each) in collaboration with Miss Sake, an organization promoting Japanese sake worldwide.
+          - Organized a joint cultural event with Okinawa Prefectural University of Arts.
+      - period: 2026.10
+        title: Reviewer, IEEE ICRA 2027
+        bullets:
+          - Reviewed main conference proceedings papers for the IEEE International Conference on Robotics and Automation (ICRA) 2027.
+      - period: 2025.5
+        title: Reviewer, IEEE ICDL 2025
+        bullets:
+          - Reviewed peer-reviewed contributed papers in the field of cognitive robotics and learning for the IEEE International Conference on Development and Learning (ICDL) 2025.

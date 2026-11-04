@@ -1,0 +1,197 @@
+# 日本語版CV
+# 各エントリのフィールド（すべて任意）:
+#   period   期間（文字列、または複数行ならリスト）
+#   title    太字の1行目（所属・学校名など）
+#   lines    通常の行（役職・指導教員など）
+#   meta     灰色の小さい行（場所など）
+#   project  太字の見出し（研究テーマ・プロジェクト名）
+#   bullets  箇条書き。{{cite:key}} で論文番号を挿入（例: {{cite:kjmr,mstj}} → [7, 8]）
+# セクションの type: entries | publications | rows
+
+lang: ja
+name: 澤田 拓希（さわだ ひろき）
+contact:
+  - label: 電話番号
+    value: (+81)-80-6787-0693
+  - label: 個人メールアドレス
+    value: hiroki.sawada.research@gmail.com
+    href: mailto:hiroki.sawada.research@gmail.com
+  - label: 社用メールアドレス
+    value: hiroki.sawada@csl.sony.co.jp
+    href: mailto:hiroki.sawada@csl.sony.co.jp
+  - label: 個人ページ
+    value: https://www.hiroki-sawada.com
+    href: https://www.hiroki-sawada.com
+
+sections:
+  - title: 学歴
+    type: entries
+    items:
+      - period: 2016.4 – 2020.3
+        title: 慶應義塾大学
+        lines: [物理情報工学 学士]
+        meta: 日本、神奈川
+      - period: 2020.9 – 2026.6
+        title: 沖縄科学技術大学院大学
+        lines: [認知脳ロボティクス研究ユニット 博士（情報科学）]
+        meta: 日本、沖縄
+
+  - title: 研究歴
+    type: entries
+    items:
+      - period: 2026.4 – present
+        title: Sony Computer Science Laboratory, Humanity Science Project
+        lines: [プロジェクトリサーチャー]
+        meta: 東京、日本
+        project: 高度技能ロボットを実現する身体融合学習基盤の創出（CREST）
+        bullets:
+          - オープンソースヒューマノイドロボット “OpenArm” を用いた物理的な人―ロボット相互作用実験の立ち上げを行う。
+          - Enactic 社製 OpenArm を使用。
+          - 小型ロボット制御器を「観測→行動」の写像として圧縮するのではなく、センサ運動ダイナミクスの予測と予測誤差による潜在状態推論として組む PredVLA を提案 {{cite:predvla}}。
+          - 単軸条件と同時条件をペアにして評価する 6 軸ベンチマーク LIBERO-CTRL を提案し、集計成功率では見えない VLA 方策の複合ロバスト性の失敗を明らかにした {{cite:liberoctrl}}。
+
+      - period: 2025.1 – 2025.7
+        title: CY セルジー・パリ大学　情報処理・システム工学研究室 (Équipes Traitement de l’Information et Systèmes Lab)
+        lines: ["アレクサンドル ピティ教授, マティアス クォイ教授 (Prof. Alexandre Pitti, Prof. Mathias Quoy)"]
+        meta: セルジー、フランス
+        project: 安定した実ロボットタスク遂行に向けた、予測符号化を基にした RNN の研究
+        bullets:
+          - 予測符号化とクラス Embedding を多層化 RNN に埋め込むことで、「生成、認識、自信のメタ推論」をリアルタイムに行える新たなモデル、CERNet を提案。
+          - ロボットを人が導いて手書きアルファベット 26 文字を教えることで、シミュレーションと実空間それぞれにおいて、学んだ 26 軌道の安定生成、軌道の認識、およびその確度のメタ推定ができることを示した。
+          - 奨学金を取得してフランスのラボにて外部研究員として勤務し、当該ラボの教授２名と共同研究を行った。Pollen Robotics 社製ヒューマノイドロボット、Reachy を使用。
+          - 研究成果は IEEE International Conference on Robotics and Automation (ICRA) の Proceedings にて発表 {{cite:cernet}}。
+
+      - period: 2021.9 – 2026.6
+        title: 沖縄科学技術大学院大学　認知脳ロボティクス研究ユニット
+        lines: [谷淳 教授]
+        meta: 沖縄、日本
+        project: 自由エネルギー原理を基にした力覚的な人-ロボットの相互作用研究
+        bullets:
+          - 自由エネルギー原理に基づき、予測符号化的な変分 RNN を用いてヒューマノイドロボットとの身体的な相互作用をモデル化し、人間とロボット間の双方向の感覚運動ダイナミクスを探究。
+          - 相互適応的な運動行動を通して、力覚と変分 RNN モデルの内部状態の関係を研究 {{cite:tsmc}}。
+          - 変分 RNN の段階的学習による新たな行動の発現を研究 {{cite:iros}}。
+          - 自由エネルギーで学習率をゲートすることで、オンラインに人との相互作用を通して学び続けられるフレームワークを提案 {{cite:fegp}}。
+          - 再構成誤差の履歴に応じて PV-RNN のメタプライアをオンラインで切り替え、内部生成と外界の感覚証拠への依存度をロボット自身が調整する機構を共同で研究 {{cite:metaprior}}。
+
+      - period: [2019.7 – 2020.1, 2021.1 – 2021.4]
+        title: 沖縄科学技術大学院大学　量子物質化学ユニット
+        lines: [岡田佳憲 准教授]
+        meta: 沖縄、日本
+        project: ファンデルワールス化合物における磁気特性評価
+        bullets:
+          - 藤澤博士と今井博士と共に、ファンデルワールス層状化合物 CeTe<sub>3</sub> 及び CeTe<sub>2</sub>Se の磁気特性を評価した。研究成果は論文として発表済み {{cite:jpsj}}。
+
+      - period: 2019.4 – 2020.3
+        title: 慶應義塾大学　的場・神原研究室
+        lines: [的場正憲 教授、神原陽一 教授]
+        meta: 神奈川、日本
+        project: Cu 欠陥による複合アニオン層状化合物の熱電変換効率最適化に向けた試料合成
+        bullets:
+          - 高い熱電変換効率が期待される LaCu<sub>1−δ</sub>S<sub>0.5</sub>Se<sub>0.5</sub>O の多結晶体合成に初めて成功。
+          - LaCu<sub>1−δ</sub>S<sub>0.5</sub>Se<sub>0.5</sub>O 多結晶体における、Cu 欠陥の熱電変換特性への影響を評価した。研究成果は論文として発表済み {{cite:kjmr,mstj}}。
+
+  - title: 職歴
+    type: entries
+    items:
+      - period: 2026.3 – 2026.4
+        title: Mercor
+        lines: [Bilingual Japanese STEM Expert Writer & Editor]
+        meta: 東京、日本
+        project: LLM 評価のための理化学系プロンプトデザイン
+        bullets:
+          - LLM を評価するための理化学系プロンプトのデザイン（Prompt-Rubric）を行う。
+          - プロンプトの作成者（Writer）および評価者（Editor）として業務に従事。
+
+      - period: 2023.9 – 2026.3
+        title: 株式会社レアゾン・ホールディングス、R&D 開発本部 エンジニア
+        meta: 東京、日本
+        project: LLM と NLP を統合した自動議事録送付システムの開発
+        bullets:
+          - 正社員（週 4 日勤務）として勤務。
+          - LLM と NLP を統合した自動議事録送付システムをメインエンジニアとして開発（コードの 95% 以上を担当）。現在は社内で稼働中。
+          - バックエンドには AWS EC2, S3, SageMaker Asynchronous Inference, Lambda などを活用し、非同期推論によるスケーラブルな構成を構築。
+          - RAG (Retrieval-Augmented Generation) を活用した GPT エージェントを開発し、社内規則に関する自然言語での問い合わせに対応可能とした。
+
+  - title: "発表論文・学会発表（arXiv preprint: under review）"
+    type: publications
+    group: preprint
+
+  - title: 発表論文・学会発表（査読有り）
+    type: publications
+    group: peer
+
+  - title: 個人プロジェクト
+    type: entries
+    items:
+      - period: 2026.10
+        title: 魔法の塔 復刻版（iOS アプリ、App Store 公開中）
+        lines: ["個人開発 | C#, Unity, iOS | <a href=\"https://apps.apple.com/jp/app/%E9%AD%94%E6%B3%95%E3%81%AE%E5%A1%94-%E5%BE%A9%E5%88%BB%E7%89%88/id6815624226\">App Store</a>"]
+        bullets:
+          - 1995 年に N.W 氏が PC-9800 シリーズ向けに発表したローグライクダンジョン RPG「魔法の塔」を、原作者の許諾を得て iPhone 向けにリメイク。
+          - 全 50 階の盤面配置・敵の数値・イベント順序を原典どおりに再現し、現代のスマートフォン向けに UI を再設計。C# と Unity で開発。
+          - 企画・UI 設計・開発から App Store での公開・運営まで、すべて一人で担当（基本無料、買い切り型アプリ内課金）。
+      - period: 2025.3 – present
+        title: LLM ベースのモバイルゲームアプリ（開発中）
+        lines: ["個人開発 | Swift, Python, OpenAI API"]
+        bullets:
+          - AI が思い浮かべたお題を、ユーザーが質問を通じて当てる iOS ゲームを個人開発中。
+          - OpenAI GPT API と AWS Lambda を用いて、リアルタイムでの推論とデータ処理を実装。
+          - ジャンルごとの一貫した回答を実現するため、プロンプトエンジニアリングを駆使して応答範囲を制御。
+          - コスト削減のため、Retrieval-Augmented Generation（RAG）を導入し、応答の一貫性と自然さを両立。
+          - Swift と Xcode を用いてネイティブアプリとして開発。デモは希望があれば提示可能（多忙によりリリース未定）。
+
+  - title: 資格・賞罰歴
+    type: entries
+    items:
+      - period: 2020.9 – 2026.6
+        title: 沖縄科学技術大学院大学　博士奨学生
+        meta: 沖縄、日本
+        bullets:
+          - 年間 240 万円の奨学金を 5 年間給付される博士奨学生に採択。
+      - period: 2021.4 – 2022.3
+        title: JEES・ソフトバンク AI 人材育成奨学金
+        meta: ソフトバンク、日本
+        bullets:
+          - 使途自由の 100 万円の給付型奨学金。
+          - AI 分野における博士課程の学生 100 人が受賞。
+      - period: 2025.1 – 2025.7
+        title: フランス政府奨学金 Bourses France Excellence 2025
+        meta: フランス政府
+        bullets:
+          - フランス政府から日本人の博士課程生への奨学金。
+          - 6 ヶ月間、1709 ユーロ/月の給付型奨学金。
+      - period: 2025.9
+        title: "TOEIC Listening & Reading test: score 975 / 990"
+
+  - title: 言語
+    type: rows
+    items:
+      - label: 英語
+        value: 準ネイティブレベル（海外に 13 年在住経験あり、TOEIC L&R 975 / 990）
+      - label: 日本語
+        value: ネイティブレベル（母国語）
+      - label: フランス語
+        value: 日常会話レベル（CEFR A2 レベル）
+
+  - title: 活動
+    type: entries
+    items:
+      - period: 2022.2 – 2023.2
+        title: OIST 学生評議会 Diversity Officer
+        bullets:
+          - OIST 内の異なる文化的背景を持つ学生間における交流を促進。
+          - 学内シンポジウム「差別とは何か」を主催。
+      - period: 2023.2 – 2024.2
+        title: OIST 学生評議会 Culture and External Relations Representative
+        bullets:
+          - OIST と地域の関係を強化するための活動を行う。
+          - 日本酒を世界に広めるための組織 Miss Sake と共同で、学内向けに日本酒の紹介イベントを 2 回開催（参加者 50 名程度 / 回）。
+          - 沖縄県立芸術大学とのコラボイベントを開催。
+      - period: 2026.10
+        title: IEEE ICRA 2027 Conference Paper 査読者
+        bullets:
+          - IEEE International Conference on Robotics and Automation (ICRA) 2027 における本会議 Proceedings 論文の査読を行う。
+      - period: 2025.5
+        title: IEEE ICDL 2025 Contributed Paper 査読者
+        bullets:
+          - IEEE International Conference on Development and Learning (ICDL) 2025 の認知ロボティクスと学習の分野における正規論文の査読を行う。

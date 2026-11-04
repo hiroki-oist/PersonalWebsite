@@ -1,0 +1,88 @@
+# 論文リスト（日英CV共通）
+# - key: 本文中で {{cite:key}} と書くと、このキーの通し番号 [n] に置き換わる
+# - group: preprint | peer  （CVの各 publications セクションが group で絞り込む）
+# - 著者中の自分の名前（Hiroki Sawada / Sawada Hiroki / 澤田拓希 など）は自動で太字＋下線
+# - 文字列中には <sub> <i> などの簡単な HTML タグが使える
+
+- key: predvla
+  group: preprint
+  authors: Hiroki Sawada and Shunichi Kasahara
+  title: "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation"
+  venue: arXiv preprint arXiv:2608.26673
+  year: 2026
+  note: Under Review
+  url: https://arxiv.org/abs/2608.26673
+
+- key: liberoctrl
+  group: preprint
+  authors: Hiroki Sawada and Shunichi Kasahara
+  title: "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies"
+  venue: arXiv preprint arXiv:2609.15940
+  year: 2026
+  note: Under Review
+  url: https://arxiv.org/abs/2609.15940
+
+- key: metaprior
+  group: preprint
+  authors: Henrique Oyama, Hiroki Sawada, and Jun Tani
+  title: Predictive-Coding-Based Autonomous Regulation of Internally Generated and Externally Coupled Processing in Human-Robot Interaction
+  venue: arXiv preprint arXiv:2609.06888
+  year: 2026
+  note: Under Review
+  url: https://arxiv.org/abs/2609.06888
+
+- key: fegp
+  group: preprint
+  authors: Hiroki Sawada and Jun Tani
+  title: Free-Energy-Gated Plasticity for Real-Time Online Motor Learning in Physical Human-Robot Interaction
+  venue: arXiv preprint arXiv:2608.23000
+  year: 2026
+  note: Under Review
+  url: https://arxiv.org/abs/2608.23000
+
+- key: tsmc
+  group: peer
+  authors: Hiroki Sawada, Wataru Ohata, and Jun Tani
+  title: Human-Robot Kinaesthetic Interaction Based on The Free Energy Principle
+  venue: "IEEE Transactions on Systems, Man, and Cybernetics: Systems"
+  year: 2024
+  url: https://ieeexplore.ieee.org/abstract/document/10734410
+
+- key: iros
+  group: peer
+  authors: Hiroki Sawada and Jun Tani
+  title: Incremental Learning in Physical Human-Robot Interaction Using Predictive-Coding inspired Variational RNNs
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Late-Breaking Poster
+  year: 2024
+
+- key: cernet
+  group: peer
+  authors: Hiroki Sawada, Alexandre Pitti, and Mathias Quoy
+  title: "CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation"
+  venue: IEEE International Conference on Robotics and Automation (ICRA), pp. 21744–21751
+  year: 2026
+  url: https://doi.org/10.1109/ICRA57385.2026.11695989
+
+- key: jpsj
+  group: peer
+  authors: Daichi Ueta, Riki Kobayashi, Hiroki Sawada, et al.
+  title: Anomalous Magnetic Moment Direction under Magnetic Anisotropy Originated from Crystalline Electric Field in van der Waals Compounds CeTe<sub>3</sub> and CeTe<sub>2</sub>Se
+  venue: "Journal of the Physical Society of Japan 91(9): 094706"
+  year: 2022
+  url: https://journals.jps.jp/doi/abs/10.7566/JPSJ.91.094706
+
+- key: kjmr
+  group: peer
+  authors: Nobuhiko Azuma, Hiroki Sawada, Houji Itoh, et al.
+  title: Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu<sub>1-δ</sub>S<sub>0.5</sub>Se<sub>0.5</sub>O (δ = 0.01)
+  venue: Korean Journal of Materials Research 34, 464–474
+  year: 2024
+  url: https://journal.mrs-k.or.kr/articles/article/LYNR/#Information
+
+- key: mstj
+  group: peer
+  authors: Nobuhiko Azuma, Hiroki Sawada, Houji Itoh, et al.
+  title: In-gap-states of a mixed anion layered compound, polycrystalline LaCu<sub>1-δ</sub>S<sub>0.5</sub>Se<sub>0.5</sub>O (δ~0.01) as a degenerate semiconductor
+  venue: Materials Science and Technology Japan 58, 64–68
+  year: 2021
+  url: https://www.mssj.or.jp/zk/zk_backno/J58/NO2/mstjv58n02p64.pdf
