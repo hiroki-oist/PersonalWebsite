@@ -24,8 +24,21 @@ export default function Projects({ lang = "ja", projects }) {
           >
             <p className="text-[13px] text-[#999] sm:pt-[3px]">{item.period}</p>
             <div className="min-w-0">
-              <h2 className="text-[17px] font-semibold leading-snug text-[#333]">{item.title}</h2>
-              {item.platform && <p className="mt-0.5 text-[13px] text-[#777]">{item.platform}</p>}
+              <div className="flex items-center gap-4">
+                {item.icon && (
+                  <img
+                    src={item.icon}
+                    alt={`${item.title} icon`}
+                    width={72}
+                    height={72}
+                    className="h-[72px] w-[72px] shrink-0 rounded-[22%] border border-[#e1e1e1]"
+                  />
+                )}
+                <div className="min-w-0">
+                  <h2 className="text-[17px] font-semibold leading-snug text-[#333]">{item.title}</h2>
+                  {item.platform && <p className="mt-0.5 text-[13px] text-[#777]">{item.platform}</p>}
+                </div>
+              </div>
               <p className="mt-2 text-[14px] leading-[1.8]">{item.description}</p>
               {item.tags?.length > 0 && (
                 <p className="mt-2 text-[12px] text-[#aaa]">{item.tags.join(" · ")}</p>
