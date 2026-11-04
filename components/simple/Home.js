@@ -25,16 +25,16 @@ const profileLinks = (lang) => [
 
 const selectedPapers = [
   {
-    title: "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
-    authors: <><strong>Hiroki Sawada</strong> and Shunichi Kasahara</>,
-    venue: "arXiv 2026",
-    links: [["arXiv", "https://arxiv.org/abs/2608.26673"]],
-  },
-  {
     title: "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies",
     authors: <><strong>Hiroki Sawada</strong> and Shunichi Kasahara</>,
     venue: "arXiv 2026",
     links: [["arXiv", "https://arxiv.org/abs/2609.15940"]],
+  },
+  {
+    title: "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
+    authors: <><strong>Hiroki Sawada</strong> and Shunichi Kasahara</>,
+    venue: "arXiv 2026",
+    links: [["arXiv", "https://arxiv.org/abs/2608.26673"]],
   },
   {
     title: "Free-Energy-Gated Plasticity for Real-Time Online Motor Learning in Physical Human-Robot Interaction",

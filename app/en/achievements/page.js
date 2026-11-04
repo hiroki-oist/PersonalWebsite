@@ -9,22 +9,6 @@ const publications = [
     ),
     year: "2026",
     title:
-      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
-    venue: "arXiv preprint (arXiv:2608.26673)",
-    href: "https://arxiv.org/abs/2608.26673",
-    description:
-      "Proposed PredVLA, a compact recurrent controller organized around predicting sensorimotor dynamics and inferring its latent state from prediction error, rather than compressing a conventional observation-to-action policy. With no robot-data pretraining and about 0.68M trainable parameters, it reaches 86.94% mean success on the three short-horizon LIBERO suites (75.35% across all four), against 19.73% for BC-Transformer and 10.26% for BC-LSTM under a matched parameter budget and an identical frozen front end.",
-    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
-    featured: true,
-  },
-  {
-    authors: (
-      <>
-        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
-      </>
-    ),
-    year: "2026",
-    title:
       "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies",
     venue: "arXiv preprint (arXiv:2609.15940)",
     href: "https://arxiv.org/abs/2609.15940",
@@ -51,6 +35,22 @@ const publications = [
   {
     authors: (
       <>
+        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
+      </>
+    ),
+    year: "2026",
+    title:
+      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
+    venue: "arXiv preprint (arXiv:2608.26673)",
+    href: "https://arxiv.org/abs/2608.26673",
+    description:
+      "Proposed PredVLA, a compact recurrent controller organized around predicting sensorimotor dynamics and inferring its latent state from prediction error, rather than compressing a conventional observation-to-action policy. With no robot-data pretraining and about 0.68M trainable parameters, it reaches 86.94% mean success on the three short-horizon LIBERO suites (75.35% across all four), against 19.73% for BC-Transformer and 10.26% for BC-LSTM under a matched parameter budget and an identical frozen front end.",
+    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
         <strong>Hiroki Sawada</strong> and Jun Tani
       </>
     ),
@@ -62,6 +62,22 @@ const publications = [
     description:
       "Extended PV-RNN to continuously adapt its synaptic weights and proposed Free-Energy-Gated Plasticity (FEGP), which regulates the effective learning rate according to variational free energy. A randomly initialized network acquired three cyclic motor patterns during real-time physical human-robot interaction without pretraining, replay, or task-boundary signals, showing that the timing of plasticity relative to model-environment mismatch, rather than its average magnitude, preserves previously acquired behaviors.",
     tags: ["FEGP", "PV-RNN", "Online Learning", "Torobo"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
+        <strong>Hiroki Sawada</strong>, Alexandre Pitti, and Mathias Quoy
+      </>
+    ),
+    year: "2026",
+    title:
+      "CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation",
+    venue: "2026 IEEE International Conference on Robotics and Automation (ICRA), pp. 21744-21751",
+    href: "https://doi.org/10.1109/ICRA57385.2026.11695989",
+    description:
+      "Proposed CERNet, a hierarchical predictive-coding RNN with class embedding, enabling unified real-time motion generation, recognition, and meta-inference of confidence. Demonstrated the model using the Reachy humanoid robot in both simulation and real-world settings.",
+    tags: ["CERNet", "ICRA 2026", "Predictive Coding", "Reachy"],
     featured: true,
   },
   {
@@ -100,18 +116,18 @@ const publications = [
   {
     authors: (
       <>
-        <strong>Hiroki Sawada</strong>, Alexandre Pitti, and Mathias Quoy
+        N. Azuma, <strong>H. Sawada</strong>, H. Ito, R. Sakagami, Y. Tanaka,
+        T. Fujioka, M. Matoba, and Y. Kamihara
       </>
     ),
-    year: "2026",
+    year: "2024",
     title:
-      "CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation",
-    venue: "2026 IEEE International Conference on Robotics and Automation (ICRA), pp. 21744-21751",
-    href: "https://doi.org/10.1109/ICRA57385.2026.11695989",
+      "Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu1-δS0.5Se0.5O (δ = 0.01)",
+    venue: "Korean Journal of Materials Research 34, 464-474",
+    href: "https://journal.mrs-k.or.kr/articles/article/LYNR/#Information",
     description:
-      "Proposed CERNet, a hierarchical predictive-coding RNN with class embedding, enabling unified real-time motion generation, recognition, and meta-inference of confidence. Demonstrated the model using the Reachy humanoid robot in both simulation and real-world settings.",
-    tags: ["CERNet", "ICRA 2026", "Predictive Coding", "Reachy"],
-    featured: true,
+      "Investigated thermal transport properties of the mixed-anion layered compound LaCu1-δS0.5Se0.5O.",
+    tags: ["Materials Science", "Thermal Transport"],
   },
   {
     authors: (
@@ -143,22 +159,6 @@ const publications = [
     description:
       "Studied in-gap states in the mixed-anion layered compound LaCu1-deltaS0.5Se0.5O as a degenerate semiconductor.",
     tags: ["Materials Science", "Thermoelectric"],
-  },
-  {
-    authors: (
-      <>
-        N. Azuma, <strong>H. Sawada</strong>, H. Ito, R. Sakagami, Y. Tanaka,
-        T. Fujioka, M. Matoba, and Y. Kamihara
-      </>
-    ),
-    year: "2024",
-    title:
-      "Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu1-δS0.5Se0.5O (δ = 0.01)",
-    venue: "Korean Journal of Materials Research 34, 464-474",
-    href: "https://journal.mrs-k.or.kr/articles/article/LYNR/#Information",
-    description:
-      "Investigated thermal transport properties of the mixed-anion layered compound LaCu1-δS0.5Se0.5O.",
-    tags: ["Materials Science", "Thermal Transport"],
   },
 ];
 

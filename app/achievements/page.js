@@ -10,23 +10,6 @@ const publications = [
     year: "2026",
     firstAuthor: true,
     title:
-      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
-    venue: "arXiv preprint (arXiv:2608.26673)",
-    href: "https://arxiv.org/abs/2608.26673",
-    description:
-      "小型ロボット制御器を「観測→行動」の写像として圧縮するのではなく、センサ運動ダイナミクスの予測と予測誤差による潜在状態推論として組むPredVLAを提案。ロボットデータの事前学習なし・約0.68MパラメータでLIBERO短horizon 3スイート平均86.94%（LONG含む4スイート平均75.35%）を達成し、同一のパラメータ予算・同一のfrozen front endを与えたBC-Transformer（19.73%）とBC-LSTM（10.26%）を大きく上回った。",
-    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
-    featured: true,
-  },
-  {
-    authors: (
-      <>
-        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
-      </>
-    ),
-    year: "2026",
-    firstAuthor: true,
-    title:
       "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies",
     venue: "arXiv preprint (arXiv:2609.15940)",
     href: "https://arxiv.org/abs/2609.15940",
@@ -53,6 +36,23 @@ const publications = [
   {
     authors: (
       <>
+        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
+      </>
+    ),
+    year: "2026",
+    firstAuthor: true,
+    title:
+      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
+    venue: "arXiv preprint (arXiv:2608.26673)",
+    href: "https://arxiv.org/abs/2608.26673",
+    description:
+      "小型ロボット制御器を「観測→行動」の写像として圧縮するのではなく、センサ運動ダイナミクスの予測と予測誤差による潜在状態推論として組むPredVLAを提案。ロボットデータの事前学習なし・約0.68MパラメータでLIBERO短horizon 3スイート平均86.94%（LONG含む4スイート平均75.35%）を達成し、同一のパラメータ予算・同一のfrozen front endを与えたBC-Transformer（19.73%）とBC-LSTM（10.26%）を大きく上回った。",
+    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
         <strong>Hiroki Sawada</strong> and Jun Tani
       </>
     ),
@@ -65,6 +65,23 @@ const publications = [
     description:
       "PV-RNNをシナプス重みの逐次適応まで拡張し、変分自由エネルギーに応じて実効学習率を制御するFree-Energy-Gated Plasticity (FEGP)を提案。事前学習・リプレイ・タスク境界信号なしに実時間の物理的人-ロボット相互作用から3つの周期運動を獲得し、可塑性の平均的な大きさではなく予測ズレに対する時間的配置が既獲得動作の保持を決めることを示した。",
     tags: ["FEGP", "PV-RNN", "Online Learning", "Torobo"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
+        <strong>Hiroki Sawada</strong>, Alexandre Pitti, and Mathias Quoy
+      </>
+    ),
+    year: "2026",
+    firstAuthor: true,
+    title:
+      "CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation",
+    venue: "2026 IEEE International Conference on Robotics and Automation (ICRA), pp. 21744-21751",
+    href: "https://doi.org/10.1109/ICRA57385.2026.11695989",
+    description:
+      "予測符号化とクラスEmbeddingを多層RNNに統合し、ロボット運動の生成、認識、自信推定を単一モデルで扱うCERNetを提案。Reachyを用いた実ロボット実験で検証した。",
+    tags: ["CERNet", "ICRA 2026", "Predictive Coding", "Reachy"],
     featured: true,
   },
   {
@@ -105,19 +122,18 @@ const publications = [
   {
     authors: (
       <>
-        <strong>Hiroki Sawada</strong>, Alexandre Pitti, and Mathias Quoy
+        N. Azuma, <strong>H. Sawada</strong>, H. Ito, R. Sakagami, Y. Tanaka,
+        T. Fujioka, M. Matoba, and Y. Kamihara
       </>
     ),
-    year: "2026",
-    firstAuthor: true,
+    year: "2024",
     title:
-      "CERNet: Class-Embedding Predictive-Coding RNN for Unified Robot Motion, Recognition, and Confidence Estimation",
-    venue: "2026 IEEE International Conference on Robotics and Automation (ICRA), pp. 21744-21751",
-    href: "https://doi.org/10.1109/ICRA57385.2026.11695989",
+      "Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu1-δS0.5Se0.5O (δ = 0.01)",
+    venue: "Korean Journal of Materials Research 34, 464-474",
+    href: "https://journal.mrs-k.or.kr/articles/article/LYNR/#Information",
     description:
-      "予測符号化とクラスEmbeddingを多層RNNに統合し、ロボット運動の生成、認識、自信推定を単一モデルで扱うCERNetを提案。Reachyを用いた実ロボット実験で検証した。",
-    tags: ["CERNet", "ICRA 2026", "Predictive Coding", "Reachy"],
-    featured: true,
+      "複合アニオン層状化合物 LaCu1-δS0.5Se0.5O の熱輸送特性に関する研究。",
+    tags: ["Materials Science", "Thermal Transport"],
   },
   {
     authors: (
@@ -149,22 +165,6 @@ const publications = [
     description:
       "LaCu1-δS0.5Se0.5O 多結晶縮退半導体の光学バンドギャップ内構造に関する物性研究。",
     tags: ["Materials Science", "Thermoelectric"],
-  },
-  {
-    authors: (
-      <>
-        N. Azuma, <strong>H. Sawada</strong>, H. Ito, R. Sakagami, Y. Tanaka,
-        T. Fujioka, M. Matoba, and Y. Kamihara
-      </>
-    ),
-    year: "2024",
-    title:
-      "Thermal transport properties of a mixed anion layered compound, polycrystalline LaCu1-δS0.5Se0.5O (δ = 0.01)",
-    venue: "Korean Journal of Materials Research 34, 464-474",
-    href: "https://journal.mrs-k.or.kr/articles/article/LYNR/#Information",
-    description:
-      "複合アニオン層状化合物 LaCu1-δS0.5Se0.5O の熱輸送特性に関する研究。",
-    tags: ["Materials Science", "Thermal Transport"],
   },
 ];
 
