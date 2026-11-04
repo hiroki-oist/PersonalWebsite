@@ -10,6 +10,23 @@ const publications = [
     year: "2026",
     firstAuthor: true,
     title:
+      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
+    venue: "arXiv preprint (arXiv:2608.26673)",
+    href: "https://arxiv.org/abs/2608.26673",
+    description:
+      "小型ロボット制御器を「観測→行動」の写像として圧縮するのではなく、センサ運動ダイナミクスの予測と予測誤差による潜在状態推論として組むPredVLAを提案。ロボットデータの事前学習なし・約0.68MパラメータでLIBERO短horizon 3スイート平均86.94%（LONG含む4スイート平均75.35%）を達成し、同一のパラメータ予算・同一のfrozen front endを与えたBC-Transformer（19.73%）とBC-LSTM（10.26%）を大きく上回った。",
+    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
+        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
+      </>
+    ),
+    year: "2026",
+    firstAuthor: true,
+    title:
       "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies",
     venue: "arXiv preprint (arXiv:2609.15940)",
     href: "https://arxiv.org/abs/2609.15940",
@@ -32,23 +49,6 @@ const publications = [
     description:
       "PV-RNNのメタプライアを、直近の相互作用履歴に蓄積された再構成誤差に応じてオンラインで切り替える機構を提案。内部生成された予測と外界の感覚証拠への依存度をロボット自身が調整する。3種類の物理的人-ロボット相互作用タスクにおいて、再構成履歴に駆動されたレジーム選択が将来方向の予測誤差とロボット側の物理的衝突を低減することを示した。",
     tags: ["PV-RNN", "Meta-Prior", "Predictive Coding", "HRI"],
-  },
-  {
-    authors: (
-      <>
-        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
-      </>
-    ),
-    year: "2026",
-    firstAuthor: true,
-    title:
-      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
-    venue: "arXiv preprint (arXiv:2608.26673)",
-    href: "https://arxiv.org/abs/2608.26673",
-    description:
-      "小型ロボット制御器を「観測→行動」の写像として圧縮するのではなく、センサ運動ダイナミクスの予測と予測誤差による潜在状態推論として組むPredVLAを提案。ロボットデータの事前学習なし・約0.68MパラメータでLIBERO短horizon 3スイート平均86.94%（LONG含む4スイート平均75.35%）を達成し、同一のパラメータ予算・同一のfrozen front endを与えたBC-Transformer（19.73%）とBC-LSTM（10.26%）を大きく上回った。",
-    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
-    featured: true,
   },
   {
     authors: (
@@ -174,7 +174,7 @@ const researchHistory = [
     title: "高度技能ロボットを実現する身体融合学習基盤の創出（CREST）",
     institution: "Sony Computer Science Laboratories, Humanity Science Project",
     location: "Tokyo, Japan",
-    advisors: "Project Researcher",
+    advisors: "Shunichi Kasahara (Research Director)",
     points: [
       "プロジェクトリサーチャーとして、物理的な人-ロボット相互作用実験の立ち上げを担当。",
       "Enactic社製のオープンソースヒューマノイドロボット「OpenArm」を使用。",

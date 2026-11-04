@@ -9,6 +9,22 @@ const publications = [
     ),
     year: "2026",
     title:
+      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
+    venue: "arXiv preprint (arXiv:2608.26673)",
+    href: "https://arxiv.org/abs/2608.26673",
+    description:
+      "Proposed PredVLA, a compact recurrent controller organized around predicting sensorimotor dynamics and inferring its latent state from prediction error, rather than compressing a conventional observation-to-action policy. With no robot-data pretraining and about 0.68M trainable parameters, it reaches 86.94% mean success on the three short-horizon LIBERO suites (75.35% across all four), against 19.73% for BC-Transformer and 10.26% for BC-LSTM under a matched parameter budget and an identical frozen front end.",
+    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
+    featured: true,
+  },
+  {
+    authors: (
+      <>
+        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
+      </>
+    ),
+    year: "2026",
+    title:
       "Beyond Single-Axis Testing: Paired Evaluation of Compound Robustness in Vision-Language-Action Policies",
     venue: "arXiv preprint (arXiv:2609.15940)",
     href: "https://arxiv.org/abs/2609.15940",
@@ -31,22 +47,6 @@ const publications = [
     description:
       "Proposed an online mechanism that switches the meta-prior of a PV-RNN according to reconstruction error accumulated over recent interaction history, letting the robot itself regulate how strongly inference relies on internally generated predictions versus external sensory evidence. Across three physical human-robot interaction tasks, reconstruction-history-driven regime selection reduced prospective prediction error and robot-side physical interaction conflict.",
     tags: ["PV-RNN", "Meta-Prior", "Predictive Coding", "HRI"],
-  },
-  {
-    authors: (
-      <>
-        <strong>Hiroki Sawada</strong> and Shunichi Kasahara
-      </>
-    ),
-    year: "2026",
-    title:
-      "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation",
-    venue: "arXiv preprint (arXiv:2608.26673)",
-    href: "https://arxiv.org/abs/2608.26673",
-    description:
-      "Proposed PredVLA, a compact recurrent controller organized around predicting sensorimotor dynamics and inferring its latent state from prediction error, rather than compressing a conventional observation-to-action policy. With no robot-data pretraining and about 0.68M trainable parameters, it reaches 86.94% mean success on the three short-horizon LIBERO suites (75.35% across all four), against 19.73% for BC-Transformer and 10.26% for BC-LSTM under a matched parameter budget and an identical frozen front end.",
-    tags: ["PredVLA", "Predictive Coding", "Robot Manipulation", "LIBERO"],
-    featured: true,
   },
   {
     authors: (
@@ -168,7 +168,7 @@ const researchHistory = [
     title: "Body Integration Learning Framework for Highly Skilled Robots (CREST)",
     institution: "Sony Computer Science Laboratories, Humanity Science Project",
     location: "Tokyo, Japan",
-    advisors: "Project Researcher",
+    advisors: "Shunichi Kasahara (Research Director)",
     points: [
       "Leading the setup of physical human-robot interaction experiments as a Project Researcher.",
       "Using the open-source humanoid robot “OpenArm” by Enactic.",

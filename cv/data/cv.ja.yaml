@@ -41,7 +41,7 @@ sections:
     items:
       - period: 2026.4 – present
         title: Sony Computer Science Laboratory, Humanity Science Project
-        lines: [プロジェクトリサーチャー]
+        lines: [プロジェクトリサーチャー, 笠原俊一 リサーチディレクター]
         meta: 東京、日本
         project: 高度技能ロボットを実現する身体融合学習基盤の創出（CREST）
         bullets:
