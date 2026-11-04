@@ -26,7 +26,6 @@ const sections = [
   ["publications", "Publications"],
   ["research", "Research Experience"],
   ["work", "Engineering Experience"],
-  ["projects", "Projects"],
   ["education", "Education"],
   ["fellowships", "Scholarships & Fellowships"],
   ["academic", "Academic Activities"],
@@ -40,7 +39,6 @@ export default function Achievements({
   education,
   fellowships,
   academicActivities,
-  projects = [],
 }) {
   const t = labels[lang];
 
@@ -98,26 +96,6 @@ export default function Achievements({
       <Timeline
         items={workHistory.map((item) => ({ ...item, institution: item.organization }))}
       />
-
-      <SectionHeading id="projects">Projects</SectionHeading>
-      <div className="space-y-5">
-        {projects.map((item) => (
-          <Row key={item.title} period={item.period}>
-            <p className="font-semibold text-[#333]">{item.title}</p>
-            <p className="mt-1 text-[14px] leading-[1.75]">{item.description}</p>
-            {item.tags?.length > 0 && (
-              <p className="mt-1 text-[12px] text-[#aaa]">{item.tags.join(" · ")}</p>
-            )}
-            {item.href && (
-              <p className="mt-1 text-[13px]">
-                <a href={item.href} className={linkClass} {...linkProps(item.href)}>
-                  {item.linkLabel ?? t.link}
-                </a>
-              </p>
-            )}
-          </Row>
-        ))}
-      </div>
 
       <SectionHeading id="education">Education</SectionHeading>
       <div className="space-y-4">

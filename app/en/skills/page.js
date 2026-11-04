@@ -92,6 +92,11 @@ const programmingSkills = [
     text: "iOS app development, including casual game development and an iPhone game app currently under development.",
     tags: ["iOS", "SpriteKit", "Game App"],
   },
+  {
+    name: "C# / Unity",
+    text: "Game development. Built the iOS app “Magic Tower Revival” on my own, from planning to App Store release.",
+    tags: ["Unity", "Game Development", "iOS", "App Store"],
+  },
 ];
 
 const toolSkills = [

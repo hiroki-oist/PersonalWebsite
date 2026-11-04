@@ -92,6 +92,11 @@ const programmingSkills = [
     text: "iOSアプリ開発。カジュアルゲーム、iPhoneゲームアプリを開発中。",
     tags: ["iOS", "SpriteKit", "ゲームアプリ"],
   },
+  {
+    name: "C# / Unity",
+    text: "ゲーム開発。iOSアプリ「魔法の塔 復刻版」を企画から App Store 公開まで一人で開発。",
+    tags: ["Unity", "ゲーム開発", "iOS", "App Store"],
+  },
 ];
 
 const toolSkills = [

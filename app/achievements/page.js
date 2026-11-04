@@ -320,18 +320,6 @@ const academicActivities = [
   },
 ];
 
-const projects = [
-  {
-    period: "2026.10",
-    title: "魔法の塔 復刻版（iOSアプリ）",
-    href: "https://apps.apple.com/jp/app/%E9%AD%94%E6%B3%95%E3%81%AE%E5%A1%94-%E5%BE%A9%E5%88%BB%E7%89%88/id6815624226",
-    linkLabel: "App Store",
-    description:
-      "1995年にN.W氏がPC-9800シリーズ向けに発表したローグライクダンジョンRPG「魔法の塔」を、原作者の許諾を得てiPhone向けにリメイク。全50階の盤面・敵の数値・イベント順序を原典どおりに再現し、企画・UI設計・開発から公開・運営まで一人で手がけ、App Storeで公開。C# / Unityで開発。",
-    tags: ["C#", "Unity", "iOS"],
-  },
-];
-
 export default function AchievementsPage() {
   return (
     <Achievements
@@ -342,7 +330,6 @@ export default function AchievementsPage() {
       education={education}
       fellowships={fellowships}
       academicActivities={academicActivities}
-      projects={projects}
     />
   );
 }
