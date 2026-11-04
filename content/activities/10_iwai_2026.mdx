@@ -1,0 +1,21 @@
+---
+id: iwai_2026
+title: "IWAI 2026（International Workshop on Active Inference）@マドリード"
+date: "2026-10-14"
+summary: "スペイン・マドリードで開催された第7回 International Workshop on Active Inference（IWAI 2026）にて、「Toward Human-Robot Synergy Beyond Individual Capability」を口頭発表とポスターで発表しました。物理的な人-ロボット相互作用を通じて、ロボットが人の運動学習をどう支えられるかを、PV-RNNのメタプライアを手がかりに探る研究です。"
+thumbnail: ""
+---
+
+2026年10月14日〜16日にスペイン・マドリードのスペイン国立研究評議会（CSIC）で開催された第7回 **International Workshop on Active Inference（IWAI 2026）** にて、**"Toward Human-Robot Synergy Beyond Individual Capability: Personalized Assistance for Motor Learning as a Foundation for Adaptive Collaboration"** を口頭発表とポスターで発表しました。ソニーCSLの笠原俊一さんとの共著です。
+
+<br />
+
+本研究の問いは、「ロボットが自分の予測に従う度合いと、相手からの感覚入力に合わせる度合いのバランスが、物理的な人-ロボット相互作用を通じた人への運動技能の伝達にどう影響するか」です。触覚的なやり取りは意図を伝える一方で、手厚すぎる支援はかえって学習を妨げることが知られており、その中間をどう設計するかが鍵になります。
+
+<br />
+
+実験系として、人とロボットがシーソーの両端を持ち、板を傾けてボールを操作する協調タスクを構築しました。ロボットは予測符号化型の変分RNNである **PV-RNN** で制御しており、人の介入によって変化する観測を取り込みながら、内部状態と運動予測をオンラインで更新します。
+
+<br />
+
+注目しているのは、PV-RNNの**メタプライア w** です。w が大きいとロボットは自分の予測を保つ「リーダー」的なふるまいに、小さいと相手に合わせて内部状態を変える「フォロワー」的なふるまいに近づきます。今後は w を条件として変え、課題成績、主体感（Sense of Agency）、技能の保持・転移への影響を調べ、最終的には人の得意不得意や状況に応じて w そのものを適応させることを目指します。

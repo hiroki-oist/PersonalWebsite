@@ -1,6 +1,7 @@
 # 論文リスト（日英CV共通）
 # - key: 本文中で {{cite:key}} と書くと、このキーの通し番号 [n] に置き換わる
-# - group: preprint | peer  （CVの各 publications セクションが group で絞り込む）
+# - group: preprint | peer | presentation | invited  （CVの各 publications セクションが group で絞り込む）
+# - date があれば (year) の代わりに末尾に表示、format は発表形式（Oral / Poster など）
 # - 著者中の自分の名前（Hiroki Sawada / Sawada Hiroki / 澤田拓希 など）は自動で太字＋下線
 # - 文字列中には <sub> <i> などの簡単な HTML タグが使える
 
@@ -48,13 +49,6 @@
   year: 2024
   url: https://ieeexplore.ieee.org/abstract/document/10734410
 
-- key: iros
-  group: peer
-  authors: Hiroki Sawada and Jun Tani
-  title: Incremental Learning in Physical Human-Robot Interaction Using Predictive-Coding inspired Variational RNNs
-  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Late-Breaking Poster
-  year: 2024
-
 - key: cernet
   group: peer
   authors: Hiroki Sawada, Alexandre Pitti, and Mathias Quoy
@@ -86,3 +80,53 @@
   venue: Materials Science and Technology Japan 58, 64–68
   year: 2021
   url: https://www.mssj.or.jp/zk/zk_backno/J58/NO2/mstjv58n02p64.pdf
+
+# ---- 学会・ワークショップ発表（新しい順） ----
+
+- key: iwai2026
+  group: presentation
+  authors: Hiroki Sawada and Shunichi Kasahara
+  title: "Toward Human-Robot Synergy Beyond Individual Capability: Personalized Assistance for Motor Learning as a Foundation for Adaptive Collaboration"
+  venue: 7th International Workshop on Active Inference (IWAI 2026), Madrid, Spain
+  format: Oral and Poster
+  date: Oct. 2026
+
+- key: ibis2026
+  group: presentation
+  authors: Hiroki Sawada and Shunichi Kasahara
+  title: "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation"
+  venue: The 29th Information-Based Induction Sciences Workshop (IBIS2026), Saitama, Japan
+  format: Poster
+  date: Oct. 2026
+
+- key: iros2026
+  group: presentation
+  authors: Hiroki Sawada and Shunichi Kasahara
+  title: "PC-VLA: A Sub-Million Parameter Predictive-Coding Policy for Language-Conditioned Robot Manipulation"
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026), Pittsburgh, USA
+  format: Late-Breaking Results Poster
+  date: Sep. 2026
+
+- key: roman2026
+  group: presentation
+  authors: Hiroki Sawada and Shunichi Kasahara
+  title: "Toward Human-Robot Synergy Beyond Individual Capability: Personalized Assistance for Motor Learning as a Foundation for Adaptive Collaboration"
+  venue: DIP-HRI Workshop, IEEE International Conference on Robot and Human Interactive Communication (RO-MAN 2026), Kitakyushu, Japan
+  date: Aug. 2026
+
+- key: iros
+  group: presentation
+  authors: Hiroki Sawada and Jun Tani
+  title: Incremental Learning in Physical Human-Robot Interaction Using Predictive-Coding inspired Variational RNNs
+  venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024), Abu Dhabi, UAE
+  format: Late-Breaking Poster
+  date: Oct. 2024
+
+# ---- 招待講演・セミナー ----
+
+- key: keio2026
+  group: invited
+  authors: Hiroki Sawada
+  title: "PredVLA: Predictive Sensorimotor Modeling for Sub-Million-Parameter Robot Manipulation"
+  venue: Invited Seminar, Murata Lab, Department of Electronics and Electrical Engineering, Keio University, Kanagawa, Japan
+  date: Oct. 30, 2026

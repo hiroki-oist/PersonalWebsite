@@ -112,13 +112,21 @@ sections:
           - バックエンドには AWS EC2, S3, SageMaker Asynchronous Inference, Lambda などを活用し、非同期推論によるスケーラブルな構成を構築。
           - RAG (Retrieval-Augmented Generation) を活用した GPT エージェントを開発し、社内規則に関する自然言語での問い合わせに対応可能とした。
 
-  - title: "発表論文・学会発表（arXiv preprint: under review）"
+  - title: "発表論文（arXiv preprint: under review）"
     type: publications
     group: preprint
 
-  - title: 発表論文・学会発表（査読有り）
+  - title: 発表論文（査読有り）
     type: publications
     group: peer
+
+  - title: 学会・ワークショップ発表
+    type: publications
+    group: presentation
+
+  - title: 招待講演・セミナー
+    type: publications
+    group: invited
 
   - title: 個人プロジェクト
     type: entries

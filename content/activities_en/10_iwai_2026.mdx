@@ -1,0 +1,21 @@
+---
+id: iwai_2026
+title: "IWAI 2026 (International Workshop on Active Inference) @ Madrid"
+date: "2026-10-14"
+summary: "I presented “Toward Human-Robot Synergy Beyond Individual Capability” as an oral talk and a poster at the 7th International Workshop on Active Inference (IWAI 2026) in Madrid, Spain. The work explores how robots can support human motor learning through physical interaction, using the meta-prior of PV-RNN as the key handle."
+thumbnail: ""
+---
+
+At the 7th **International Workshop on Active Inference (IWAI 2026)**, held October 14–16, 2026 at the Spanish National Research Council (CSIC) in Madrid, I presented **“Toward Human-Robot Synergy Beyond Individual Capability: Personalized Assistance for Motor Learning as a Foundation for Adaptive Collaboration”** as both an oral talk and a poster. This is joint work with Shunichi Kasahara at Sony CSL.
+
+<br />
+
+Our research question is how the balance between a robot's prior-driven behavior and its sensory adaptation influences the transfer of motor skills to humans through physical human-robot interaction. Haptic interaction can convey intention, yet too much guidance is known to hinder learning, so the key is how to design the space in between.
+
+<br />
+
+As our testbed, we built a cooperative seesaw task in which a human and a robot hold opposite ends of a board and tilt it to control a ball. The robot is driven by **PV-RNN**, a predictive-coding-inspired variational RNN, which updates its internal state and motion predictions online as human intervention changes what it observes.
+
+<br />
+
+Our focus is PV-RNN's **meta-prior w**. A large w makes the robot preserve its own predictions, closer to a leader-style behavior, while a small w makes it adapt its internal state to the partner, closer to a follower-style behavior. Next, we will vary w as an experimental condition and measure its effects on task performance, sense of agency, and skill retention and transfer, with the eventual goal of adapting w itself to each person's strengths and to the situation.

@@ -103,13 +103,21 @@ sections:
           - Built a scalable backend leveraging AWS EC2, S3, SageMaker Asynchronous Inference, Lambda, and other services to enable asynchronous inference.
           - Designed and developed a RAG-based GPT agent capable of answering complex queries regarding internal company policies and regulations, improving internal knowledge accessibility and employee self-service efficiency.
 
-  - title: Publications and Presentations (arXiv preprint, under review)
+  - title: Publications (arXiv preprint, under review)
     type: publications
     group: preprint
 
-  - title: Publications and Presentations (peer-reviewed)
+  - title: Publications (peer-reviewed)
     type: publications
     group: peer
+
+  - title: Conference and Workshop Presentations
+    type: publications
+    group: presentation
+
+  - title: Invited Talks and Seminars
+    type: publications
+    group: invited
 
   - title: Personal Projects
     type: entries

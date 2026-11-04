@@ -29,7 +29,9 @@ const LANGS = [
 // Own name variants to highlight in author lists.
 const ME = /(Hiroki Sawada|Sawada Hiroki|H\. Sawada|澤田\s?拓希)/g;
 
-const load = (f) => yaml.load(fs.readFileSync(path.join(cvDir, "data", f), "utf8"));
+// FAILSAFE_SCHEMA keeps every scalar a string, so periods like 2026.10 are not read as the number 2026.1.
+const load = (f) =>
+  yaml.load(fs.readFileSync(path.join(cvDir, "data", f), "utf8"), { schema: yaml.FAILSAFE_SCHEMA });
 
 const publications = load("publications.yaml");
 const pubByKey = new Map(publications.map((p) => [p.key, p]));
@@ -73,11 +75,14 @@ function render(cv) {
 
   const pub = (p) => {
     const authors = p.authors.replace(ME, '<span class="me">$1</span>');
-    const year = p.year && !String(p.venue).includes(String(p.year)) ? ` (${p.year})` : "";
+    const format = p.format ? `, ${p.format}` : "";
+    const year = p.date
+      ? `, ${p.date}`
+      : p.year && !String(p.venue).includes(String(p.year)) ? ` (${p.year})` : "";
     const note = p.note ? ` (${p.note})` : "";
     const title = p.url ? `<a href="${p.url}">${p.title}</a>` : p.title;
     return `<li><span class="num">[${numbers.get(p.key)}]</span>
-      <span>${authors}${p.authors.trim().endsWith(".") ? "" : "."} “${title}.” <span class="venue">${p.venue}</span>${year}.${note}</span></li>`;
+      <span>${authors}${p.authors.trim().endsWith(".") ? "" : "."} “${title}.” <span class="venue">${p.venue}</span>${format}${year}.${note}</span></li>`;
   };
 
   const section = (s) => {
